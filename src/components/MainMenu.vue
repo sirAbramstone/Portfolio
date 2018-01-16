@@ -14,11 +14,7 @@
     </div>
   </div>
 </template>
-<!--<li><a href="https://www.google.ru/"><span class="lnr lnr-home icon"></span></a></li>-->
-<!--<li><a href="https://www.google.ru/"><span class="lnr lnr-layers icon"></span></a></li>-->
-<!--<li><a href="https://www.google.ru/"><span class="lnr lnr-code icon"></span></a></li>-->
-<!--<li><a href="https://www.google.ru/"><span class="lnr lnr-user icon"></span></a></li>-->
-<!--<li><a href="https://www.google.ru/"><span class="lnr lnr-envelope icon"></span></a></li>-->
+
 <script>
   export default {
     data () {
