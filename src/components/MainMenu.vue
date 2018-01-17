@@ -69,7 +69,7 @@
 
   .wrap-menu {
     width: 60px;
-    background-color: #2D3B40;
+    background-color: #181818;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -98,7 +98,7 @@
   }
 
   .icon {
-    color: #86B0BF;
+    color: #252627;
     font-weight: 100;
     font-size: 30px;
   }
