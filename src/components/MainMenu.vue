@@ -63,13 +63,15 @@
 </script>
 
 <style lang="scss">
+@import "../main.scss";
+
   a {
     text-decoration: none;
   }
 
   .wrap-menu {
     width: 60px;
-    background-color: #181818;
+    background-color: $menu-bg;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -77,16 +79,12 @@
   }
 
   .navigation {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+   @include flex-box;
 
     & li {
       margin-bottom: 15px;
         span {
-          opacity: .6;
+          opacity: $opacity;
         }
     }
   }
@@ -98,26 +96,22 @@
   }
 
   .icon {
-    color: #252627;
+    color: $icon;
     font-weight: 100;
     font-size: 30px;
   }
 
   .social {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+   @include flex-box;
     padding-bottom: 10px;
 
     & li {
       font-size: 1.25em;
-      opacity: .6;
+      opacity: $opacity;
       margin-top: 5px;
 
       & a {
-      color: #86B0BF;
+      color: $icon;
       }
     } 
   }

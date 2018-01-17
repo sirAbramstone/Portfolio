@@ -1,0 +1,16 @@
+$dark: #252627;
+$white: #fff;
+$acid: #08fdd8;
+$font-size-small: 14px;
+$font-size-large: 54px;
+$opacity: .7;
+$menu-bg: #181818;
+$icon: #4d4d4e;
+
+@mixin flex-box {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+} 
