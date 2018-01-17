@@ -1,14 +1,22 @@
 <template>
-  <div class="wrap_home">
-    <div class="home_content">
-      <div class="h_text1"><span>Hi,</span></div>
-      <div class="h_text2"><span>I'm Dmitry,</span></div>
-      <div class="h_text3"><span>web developer.</span></div>
-      <div class="h_smalltxt"><span>Frontend web developer / React / Vue / Angular JS</span></div>
-      <button>contact me</button>
+  <div id="main-home">
+    <div class="wrap_home">
+      <div class="home_content">
+        <div class="h_text1"><span>Hi,</span></div>
+        <div class="h_text2"><span>I'm Dmitry,</span></div>
+        <div class="h_text3"><span>web developer.</span></div>
+        <div class="h_smalltxt"><span>Frontend web developer / React / Vue / Angular JS</span></div>
+        <button>contact me</button>
+      </div>
     </div>
   </div>
 </template>
+
+<script>
+  export default {
+    name: 'Home'
+  }
+</script>
 
 <style lang="scss">
   .wrap_home {
