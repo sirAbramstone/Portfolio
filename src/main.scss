@@ -6,6 +6,7 @@ $font-size-large: 54px;
 $opacity: .7;
 $menu-bg: #181818;
 $icon: #4d4d4e;
+$height: 100vh; 
 
 @mixin flex-box {
 	display: flex;
@@ -13,4 +14,4 @@ $icon: #4d4d4e;
     justify-content: center;
     align-items: center;
     width: 100%;
-} 
+}

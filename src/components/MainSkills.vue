@@ -1,6 +1,8 @@
 <template>
   	<div id="main-skills">
-		<div class="wrap-skills">
+  		<div class="wrap-content">
+  		<div class="nav-bar"></div>
+		<div class="container-skills">
 			<div class="skills-content">
 				<div class="h_1"><h2>Skills & Experience</h2></div>
 				<div class="text_1">
@@ -12,22 +14,57 @@
 			</div>
 		</div>
 	</div>
+	</div>
 </template>
 
 <script>
-  export default {
-    name: 'Skills'
-  }
+	/*import Menu from './MainMenu.vue';*/
+
+  	export default {
+    	name: 'Skills'
+  	}
 </script>
 
 <style lang="scss">
+	@import "../main.scss"; 
 
-	.wrap-skills {
+	.wrap-content {
+		display: flex;
+		
+	}
+
+	.nav-bar {
+		display: flex;
+		flex-direction: column;
+    	justify-content: space-between;
+    	position: relative;
+		background-color: $menu-bg;
+    	height: $height;
+		width: 60px;
+	}
+	
+	.container-skills {
+		position: relative;
 		width: 100%;
+		height: $height;
+		top: 10%;
+		background-color: $dark;
 
 		.skills-content {
 			display: flex;
 			flex-direction: column;
+			position: relative;
+			left: 5%;
+			top: 10%;
+			width: 30%;
+
+			.h_1 {
+				color: $acid;
+
+				.h2 {
+					color: $acid;
+				}
+			}
 		}
 	}
 

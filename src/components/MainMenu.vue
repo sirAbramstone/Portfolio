@@ -26,6 +26,7 @@
 
 <script>
   export default {
+    name: 'Menu',
     data () {
       return {
         items: [
@@ -72,7 +73,7 @@
   .wrap-menu {
     width: 60px;
     background-color: $menu-bg;
-    height: 100vh;
+    height: $height;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
