@@ -1,5 +1,6 @@
 <template>
   	<div id="main-skills">
+      <main-menu></main-menu>
 		<div class="wrap-skills">
 			<div class="skills-content">
 				<div class="h_1"><h2>Skills & Experience</h2></div>
@@ -15,12 +16,21 @@
 </template>
 
 <script>
+  import MainMenu from './MainMenu';
+
   export default {
-    name: 'Skills'
+    name: 'Skills',
+    components: {
+      'main-menu': MainMenu
+    }
   }
 </script>
 
 <style lang="scss">
+
+  #main-skills {
+    display: flex;
+  }
 
 	.wrap-skills {
 		width: 100%;

@@ -1,20 +1,24 @@
 <template>
-  <div id="main-home">
-    <div class="wrap_home">
-      <div class="home_content">
-        <div class="h_text1"><span>Hi,</span></div>
-        <div class="h_text2"><span>I'm Dmitry,</span></div>
-        <div class="h_text3"><span>web developer.</span></div>
-        <div class="h_smalltxt"><span>Frontend web developer / React / Vue / Angular JS</span></div>
-        <button>contact me</button>
+      <div class="wrap_home">
+        <main-menu></main-menu>
+        <div class="home_content">
+          <div class="h_text1"><span>Hi,</span></div>
+          <div class="h_text2"><span>I'm Dmitry,</span></div>
+          <div class="h_text3"><span>web developer.</span></div>
+          <div class="h_smalltxt"><span>Frontend web developer / React / Vue / Angular JS</span></div>
+          <button>contact me</button>
+        </div>
       </div>
-    </div>
-  </div>
 </template>
 
 <script>
+  import MainMenu from './MainMenu';
+
   export default {
-    name: 'Home'
+    name: 'Home',
+    components: {
+      'main-menu': MainMenu
+    }
   }
 </script>
 

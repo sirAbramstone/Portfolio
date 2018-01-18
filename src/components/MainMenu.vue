@@ -6,9 +6,9 @@
       </div>
       <nav class="navigation">
         <li v-for="(item, index) of items">
-          <a v-bind:href="item">
+          <router-link v-bind:to="item">
             <span v-bind:class="[lnr, icon, lnrVar[index]]"></span>
-          </a>
+          </router-link>
         </li>
       </nav>
       <nav class="social">
@@ -21,7 +21,7 @@
     </nav>
     </div>
   </div>
- 
+
 </template>
 
 <script>
@@ -29,11 +29,11 @@
     data () {
       return {
         items: [
-          'www.google.com',
-          'yandex.ru',
-          'mail.ru',
-          'facebook.com',
-          'yahoo.com'
+          '/',
+          '/skills',
+          '/about',
+          '/work',
+          '/contact'
         ],
         lnr: 'lnr',
         icon: 'icon',
@@ -113,7 +113,7 @@
       & a {
       color: $icon;
       }
-    } 
+    }
   }
 
 </style>
