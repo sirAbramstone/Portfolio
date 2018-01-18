@@ -1,6 +1,8 @@
 <template>
-  <div class="loader">
-    <span>{</span><span>}</span>
+  <div id="preloader">
+    <div class="loader">
+      <span>{</span><span>}</span>
+    </div>
   </div>
 </template>
 
@@ -14,11 +16,12 @@
 <style lang="scss">
   $background-color: #252627;
   $loader-color: #fff;
-  $loader-size: 30vh;
+  $loader-size: 20vh;
 
-  body {
-    background: #252627;
-    display: flex;
+  #preloader {
+    position: absolute;
+    left: 40%;
+    top: 35%;
   }
 
   .loader {
@@ -27,7 +30,7 @@
     font-family: Consolas, Menlo, Monaco, monospace;
     font-weight: bold;
     font-size: $loader-size;
-
+    align-self: center;
     opacity: 0.8;
 
     span {

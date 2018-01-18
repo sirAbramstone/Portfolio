@@ -27,14 +27,15 @@
 </script>
 
 <style lang="scss">
+  @import "main";
 
   body {
     margin: 0;
     padding: 0;
-  }
-  #app {
     display: flex;
+    background-color: $dark;
   }
+
   nav li {
     list-style-type: none;
   }
