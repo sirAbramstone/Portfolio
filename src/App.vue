@@ -1,12 +1,28 @@
 <template>
   <div id="app">
-      <router-view></router-view>
+      <Preloader v-if="loading"></Preloader>
+      <router-view v-else="loading"></router-view>
   </div>
 </template>
 
 <script>
+  import Preloader from './components/Preloader';
+
   export default {
-    name: 'app'
+    name: 'app',
+    components: {
+      Preloader
+    },
+    data: function () {
+      return {
+        loading: true
+      }
+   },
+    mounted: function () {
+      window.setInterval(function () {
+        this.loading = false
+      }.bind(this), 1000)
+    }
   }
 </script>
 
@@ -21,5 +37,8 @@
   }
   nav li {
     list-style-type: none;
+  }
+  [v-cloak] {
+    display: none;
   }
 </style>
