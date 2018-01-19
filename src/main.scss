@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 $dark: #252627;
 $white: #fff;
 $acid: #08fdd8;
 $font-size-small: 14px;
-$font-size-large: 54px;
+$font-size-large: 50px;
 $opacity: .7;
 $menu-bg: #181818;
 $icon: #4d4d4e;
@@ -14,4 +16,15 @@ $height: 100vh;
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+@mixin flex-content {
+	display: inherit;
+	flex-direction: column;
+	justify-content: start;
+	align-items: flex-start;
+}
+
+@mixin h2-content {
+	
 }

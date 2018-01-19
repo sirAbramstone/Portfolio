@@ -23,16 +23,16 @@
 </script>
 
 <style lang="scss">
+  @import "../main.scss";
+
   .wrap_home {
-    background-color: #252627;
+    background-color: $dark;
     width: 100%;
     display: flex;
 
       .home_content {
-        display: inherit;
-        flex-direction: column;
-        justify-content: center;
-        padding-left: 10%;
+        @include flex-content;
+        padding-left: 5%;
 
           & span {
             font-size: 54px;
@@ -41,7 +41,7 @@
             font-size: 14px;
           }
           & button {
-            background-color: #252627;
+            background-color: $dark;
           }
       }
   }
