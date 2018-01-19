@@ -21,25 +21,26 @@
     mounted: function () {
       window.setInterval(function () {
         this.loading = false
-      }.bind(this), 1000)
+      }.bind(this), 750)
     }
   }
 </script>
 
 <style lang="scss">
-  @import "main";
+  @import "styles/main";
 
   body {
     margin: 0;
     padding: 0;
     background-color: $dark;
+<<<<<<< HEAD
     font-family: 'Open Sans', sans-serif; 
+=======
+    color: $white;
+>>>>>>> cd08d43abdeb2f12b526ea56974119646f528268
   }
 
   nav li {
     list-style-type: none;
-  }
-  [v-cloak] {
-    display: none;
   }
 </style>

@@ -1,4 +1,8 @@
+<<<<<<< HEAD:src/main.scss
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+=======
+@import "animation";
+>>>>>>> cd08d43abdeb2f12b526ea56974119646f528268:src/styles/main.scss
 
 $dark: #252627;
 $white: #fff;
@@ -8,7 +12,7 @@ $font-size-large: 50px;
 $opacity: .7;
 $menu-bg: #181818;
 $icon: #4d4d4e;
-$height: 100vh; 
+$height: 100vh;
 
 @mixin flex-box {
 	display: flex;
@@ -17,6 +21,7 @@ $height: 100vh;
     align-items: center;
     width: 100%;
 }
+<<<<<<< HEAD:src/main.scss
 
 @mixin flex-content {
 	display: inherit;
@@ -28,3 +33,5 @@ $height: 100vh;
 @mixin h2-content {
 	
 }
+=======
+>>>>>>> cd08d43abdeb2f12b526ea56974119646f528268:src/styles/main.scss
