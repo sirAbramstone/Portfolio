@@ -42,26 +42,18 @@
 			@include flex-content;
 			padding-top: 5%;
 			padding-left: 5%;
-			letter-spacing: 0.001em;
+			letter-spacing: 1.5px;
 		}
 
 			.skills_content_h2 {
-				display: inherit;
-				color: $acid;
-				font-size: $font-size-large;
-				font-weight: normal;
-				width: 33%;
-				line-height: 1.5em;
+				@include content-h2;
 				margin-bottom: 20px;
+				width: 33%;
 			}
 
 			.skills_content_txt {
-				display: inherit;
-				flex-direction: column;
-				color: $white;
-				font-size: $font-size-small;
-				width: 33%;
-				line-height: 1.3em;
+				@include content-txt;
+				width: 38%;
 
 				p {
 					margin: 10px 0 10px;

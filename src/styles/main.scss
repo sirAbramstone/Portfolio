@@ -40,3 +40,17 @@ $background: radial-gradient(ellipse at center, rgb(49, 44, 24) 0%, rgba(0, 0, 0
 	font-size: 12px;
 }
 
+@mixin content-h2 {
+	display: inherit;
+	color: $acid;
+	font-size: $font-size-large;
+	font-weight: bolder;
+	line-height: 1.5em;
+}
+
+@mixin content-txt {
+	display: inherit;
+	flex-direction: column;
+	font-size: $font-size-small;
+	line-height: 1.3em;
+}
