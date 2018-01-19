@@ -10,6 +10,8 @@ $opacity: .7;
 $menu-bg: #181818;
 $icon: #4d4d4e;
 $height: 100vh;
+$stack: #8d8d8d;
+$background: radial-gradient(ellipse at center, rgb(49, 44, 24) 0%, rgba(0, 0, 0, 0.73) 100%);
 
 @mixin flex-box {
 	display: flex;
@@ -26,4 +28,15 @@ $height: 100vh;
 	align-items: flex-start;
 }
 
+@mixin luxury-button {
+	border-color: $acid;
+	border-radius: 2px;
+	border-width: 1px;
+	width: 150px;
+	height: 30px;
+	text-transform: uppercase;
+	color: $acid;
+	letter-spacing: 3px;
+	font-size: 12px;
+}
 

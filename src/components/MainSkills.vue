@@ -35,7 +35,7 @@
 	.wrap_skills {
 		display: flex;
     	width: 100%;
-    	background-color: $dark;
+    	background: $background;
     	height: $height;
 
 		.skills_content {
@@ -49,7 +49,7 @@
 				display: inherit;
 				color: $acid;
 				font-size: $font-size-large;
-				font-weigth: normal;
+				font-weight: normal;
 				width: 33%;
 				line-height: 1.5em;
 				margin-bottom: 20px;

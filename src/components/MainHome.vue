@@ -2,7 +2,7 @@
       <div class="wrap_home">
         <main-menu></main-menu>
         <div class="home_content">
-          <div class="h_text1">
+          <div class="home_content_h_text1">
             <div
               v-bind:class="myclass"
               v-on:mouseover="rubber"
@@ -10,22 +10,23 @@
             >Hi,
             </div>
           </div>
-          <div class="h_text2">
+          <div class="home_content_h_text2">
             <div>I'm Dmitry,</div>
           </div>
-          <div class="h_text3">
+          <div class="home_content_h_text3">
             <div>web developer.</div>
           </div>
-          <div class="h_smalltxt">
+          <div class="home_content_h_smalltxt">
             <div>Frontend web developer / React / Vue / Angular JS</div>
           </div>
-          <button>contact me</button>
+          <Button></Button>
         </div>
       </div>
 </template>
 
 <script>
   import MainMenu from './MainMenu';
+  import Button from './Button';
 
   export default {
     name: 'Home',
@@ -35,7 +36,8 @@
       }
     },
     components: {
-      'main-menu': MainMenu
+      'main-menu': MainMenu,
+      'Button': Button 
     },
     methods: {
       rubber: function () {
@@ -49,7 +51,7 @@
   @import "../styles/main.scss";
 
   .wrap_home {
-    background-color: $dark;
+    background: $background;
     width: 100%;
     display: flex;
 
@@ -58,13 +60,23 @@
         flex-direction: column;
         justify-content: center;
         padding-left: 5%;
+        font-size: $font-size-large;
+        letter-spacing: 0.001em;
+        line-height: 1em;
+        width: 38%;
+        font-weight: bolder;
 
           & span {
-            font-size: 54px;
+            font-size: $font-size-large;
           }
-          .h_smalltxt span{
-            font-size: 14px;
+
+          .home_content_h_smalltxt {
+            color: $stack;
+            font-size: $font-size-small;
+            letter-spacing: inherit;
+            font-weight: 100;
           }
+
           & button {
             background-color: $dark;
           }
