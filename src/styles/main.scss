@@ -1,3 +1,5 @@
+@import "animation";
+
 $dark: #252627;
 $white: #fff;
 $acid: #08fdd8;
@@ -6,7 +8,7 @@ $font-size-large: 54px;
 $opacity: .7;
 $menu-bg: #181818;
 $icon: #4d4d4e;
-$height: 100vh; 
+$height: 100vh;
 
 @mixin flex-box {
 	display: flex;

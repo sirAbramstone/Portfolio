@@ -64,7 +64,7 @@
 </script>
 
 <style lang="scss">
-@import "../main.scss";
+@import "../styles/main";
 
   a {
     text-decoration: none;
