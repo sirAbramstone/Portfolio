@@ -1,6 +1,6 @@
 <template>
 	<div class="wrap_skills">
-      <main-menu></main-menu>	
+      <main-menu></main-menu>
 		<div class="skills_content">
 			<div class="skills_content_h2"><h2>Skills & Experience</h2></div>
 			<div class="skills_content_txt">
@@ -25,24 +25,24 @@
 </script>
 
 <style lang="scss">
-	@import "../main.scss";
+	@import "../styles/main";
 
 	* {
 		margin: 0;
     	padding: 0;
 	}
-	
+
 	.wrap_skills {
 		display: flex;
     	width: 100%;
     	background-color: $dark;
     	height: $height;
-		
+
 		.skills_content {
 			@include flex-content;
 			padding-top: 5%;
 			padding-left: 5%;
-			letter-spacing: 0.001em;		
+			letter-spacing: 0.001em;
 		}
 
 			.skills_content_h2 {

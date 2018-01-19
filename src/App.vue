@@ -33,11 +33,8 @@
     margin: 0;
     padding: 0;
     background-color: $dark;
-<<<<<<< HEAD
-    font-family: 'Open Sans', sans-serif; 
-=======
+    font-family: 'Open Sans', sans-serif;
     color: $white;
->>>>>>> cd08d43abdeb2f12b526ea56974119646f528268
   }
 
   nav li {

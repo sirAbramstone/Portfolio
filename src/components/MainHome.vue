@@ -46,10 +46,7 @@
 </script>
 
 <style lang="scss">
-<<<<<<< HEAD
-  @import "../main.scss";
-=======
->>>>>>> cd08d43abdeb2f12b526ea56974119646f528268
+  @import "../styles/main.scss";
 
   .wrap_home {
     background-color: $dark;
@@ -57,7 +54,9 @@
     display: flex;
 
       .home_content {
-        @include flex-content;
+        display: inherit;
+        flex-direction: column;
+        justify-content: center;
         padding-left: 5%;
 
           & span {
