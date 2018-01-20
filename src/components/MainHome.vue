@@ -2,40 +2,41 @@
       <div class="wrap_home">
         <main-menu></main-menu>
         <div class="home_content">
-          <div class="h_text1">
-            <div
-              v-bind:class="myclass"
-              v-on:mouseover="rubber"
-              v-on:mouseleave="myclass='none'"
-            >Hi,
-            </div>
+          <div v-for="text in texts">
+            <div v-bind:class="myclass" v-on:mouseover="rubber" v-on:mouseleave="myclass='none'">{{ text }}</div>
           </div>
-          <div class="h_text2">
-            <div>I'm Dmitry,</div>
-          </div>
-          <div class="h_text3">
-            <div>web developer.</div>
-          </div>
-          <div class="h_smalltxt">
-            <div>Frontend web developer / React / Vue / Angular JS</div>
-          </div>
-          <button>contact me</button>
+          <Button v-bind:class="btnCls" btn_msg="contact me"></Button>
         </div>
+        <neon></neon>
       </div>
 </template>
 
 <script>
   import MainMenu from './MainMenu';
+  import NeonBg from './NeonBg';
+  import Button from './Button';
 
   export default {
     name: 'Home',
     data () {
       return {
-        myclass: 'none'
+        myclass: 'none',
+        btnCls: {
+          button: true,
+          btn_home: true
+        },
+        texts: [
+          'Hi,',
+          'Im Dmitry',
+          'web developer.',
+          'Frontend web developer / React / Vue / Angular JS'
+        ]
       }
     },
     components: {
-      'main-menu': MainMenu
+      'main-menu': MainMenu,
+      'neon': NeonBg,
+      'Button': Button
     },
     methods: {
       rubber: function () {
@@ -49,7 +50,7 @@
   @import "../styles/main.scss";
 
   .wrap_home {
-    background-color: $dark;
+    background: $gradient;
     width: 100%;
     display: flex;
 

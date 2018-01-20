@@ -10,6 +10,7 @@ $opacity: .7;
 $menu-bg: #181818;
 $icon: #4d4d4e;
 $height: 100vh;
+$gradient: radial-gradient(ellipse at center, rgb(49, 44, 24) 0%, rgba(0, 0, 0, 0.73) 100%);
 
 @mixin flex-box {
 	display: flex;
