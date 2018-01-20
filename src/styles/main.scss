@@ -11,6 +11,8 @@ $menu-bg: #181818;
 $icon: #4d4d4e;
 $height: 100vh;
 $gradient: radial-gradient(ellipse at center, rgb(49, 44, 24) 0%, rgba(0, 0, 0, 0.73) 100%);
+$stack: #8d8d8d;
+
 
 @mixin flex-box {
 	display: flex;
@@ -27,4 +29,29 @@ $gradient: radial-gradient(ellipse at center, rgb(49, 44, 24) 0%, rgba(0, 0, 0, 
 	align-items: flex-start;
 }
 
+@mixin luxury-button {
+	border-color: $acid;
+	border-radius: 2px;
+	border-width: 1px;
+	width: 150px;
+	height: 30px;
+	text-transform: uppercase;
+	color: $acid;
+	letter-spacing: 3px;
+	font-size: 12px;
+}
 
+@mixin content-h2 {
+	display: inherit;
+	color: $acid;
+	font-size: $font-size-large;
+	font-weight: bolder;
+	line-height: 1.5em;
+}
+
+@mixin content-txt {
+	display: inherit;
+	flex-direction: column;
+	font-size: $font-size-small;
+	line-height: 1.3em;
+}
