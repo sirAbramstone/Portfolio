@@ -32,11 +32,6 @@
           button: true,
           btn_home: true
         },
-        texts: [
-          'Hi,',
-          "I'm Dmitry",
-          'web developer.'
-        ]
       }
     },
     components: {
@@ -45,9 +40,6 @@
       'Button': Button
     },
     methods: {
-      rubber: function () {
-        this.myclass = 'rubberBand'
-      },
       spanChar: function (text) {
         return text.split('').map(function (char) {
           return '<span>' + char + '</span>'}).join('');
