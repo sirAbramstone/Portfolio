@@ -3,11 +3,7 @@
         <main-menu></main-menu>
         <div class="home_content">
           <div class="wrap_home_content_text">
-            <div v-for="text in texts">
-              <div class="home_content_text"
-                   v-bind:class="myclass"
-                   v-on:mouseover="rubber"
-                   v-on:mouseleave="myclass='none'">{{ text.split('').join('').reduce((res, char ) => {}) }}</div>
+            <div class="home_content_text" v-for="text in texts" v-html="charSpan(text)">
             </div>
             <div class="home_content_text_small str">React / Vue / And many other stuff</div>
           </div>
@@ -33,8 +29,8 @@
         },
         texts: [
           'Hi,',
-          "I'm Dmitry",
-          'web developer.'
+          'Im Danil',
+          'web developer'
         ]
       }
     },
@@ -44,8 +40,11 @@
       'Button': Button
     },
     methods: {
-      rubber: function () {
-        this.myclass = 'rubberBand'
+      charSpan: function (text) {
+        return text.split('').map(function (s) {
+          return '<div class = "char">' + s + '</div>'
+        }).join('')
+
       }
     }
   }
@@ -78,5 +77,20 @@
           font-size: $font-size-small;
         }
       }
+    .char {
+      display: inline-block;
+      transition: transform 1s ease-in-out;
+
+      &:hover {
+        animation-name: rubberBand;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        color: $acid;
+      }
+    }
+
+    .char:nth-child(3){
+      padding: 10px;
+    }
   }
 </style>
