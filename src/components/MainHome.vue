@@ -2,8 +2,14 @@
       <div class="wrap_home">
         <main-menu></main-menu>
         <div class="home_content">
-          <div v-for="text in texts">
-            <div v-bind:class="myclass" v-on:mouseover="rubber" v-on:mouseleave="myclass='none'">{{ text }}</div>
+          <div class="wrap_home_content_text">
+            <div v-for="text in texts">
+              <div class="home_content_text"
+                   v-bind:class="myclass"
+                   v-on:mouseover="rubber"
+                   v-on:mouseleave="myclass='none'">{{ text.split('').join('').reduce((res, char ) => {}) }}</div>
+            </div>
+            <div class="home_content_text_small str">React / Vue / And many other stuff</div>
           </div>
           <Button v-bind:class="btnCls" btn_msg="contact me"></Button>
         </div>
@@ -27,9 +33,8 @@
         },
         texts: [
           'Hi,',
-          'Im Dmitry',
-          'web developer.',
-          'Frontend web developer / React / Vue / Angular JS'
+          "I'm Dmitry",
+          'web developer.'
         ]
       }
     },
@@ -44,6 +49,12 @@
       }
     }
   }
+
+  ///Функция для ебаной анимации буковъ
+
+
+
+
 </script>
 
 <style lang="scss">
@@ -60,15 +71,12 @@
         justify-content: center;
         padding-left: 5%;
 
-          & span {
-            font-size: 54px;
-          }
-          .h_smalltxt span{
-            font-size: 14px;
-          }
-          & button {
-            background-color: $dark;
-          }
+        .home_content_text {
+          font-size: $font-size-large;
+        }
+        .home_content_text_small {
+          font-size: $font-size-small;
+        }
       }
   }
 </style>

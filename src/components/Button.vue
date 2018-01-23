@@ -16,9 +16,7 @@
 @import "../styles/main";
 
   .button {
-    border-color: $acid;
-    text-transform: uppercase;
-    color: $white;
+    @include luxury_button;
   }
 
   .btn_home {

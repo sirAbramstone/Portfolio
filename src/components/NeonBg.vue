@@ -132,7 +132,7 @@
   .container_neon {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    padding-left: 10%;
   }
   .neon {
     width: 100%;

@@ -32,7 +32,7 @@
   body {
     margin: 0;
     padding: 0;
-    background: radial-gradient(ellipse at center, rgb(49, 44, 24) 0%, rgba(0, 0, 0, 0.73) 100%);
+    background: $dark;
     font-family: 'Open Sans', sans-serif;
     color: $white;
   }
