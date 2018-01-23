@@ -3,7 +3,16 @@
         <main-menu></main-menu>
         <div class="home_content">
           <div class="wrap_home_content_text">
+<<<<<<< HEAD
             <div class="home_content_text" v-for="text in texts" v-html="charSpan(text)">
+=======
+            <div v-for="text in texts">
+              <div class="home_content_text"
+                   v-bind:class="myclass"
+                   v-on:mouseover="rubber"
+                   v-on:mouseleave="myclass='none'"
+                   v-html="spanChar(text)"></div>
+>>>>>>> 8b16f46566b883efd58080d60d0bb451ef784ee6
             </div>
             <div class="home_content_text_small str">React / Vue / And many other stuff</div>
           </div>
@@ -40,11 +49,20 @@
       'Button': Button
     },
     methods: {
+<<<<<<< HEAD
       charSpan: function (text) {
         return text.split('').map(function (s) {
           return '<div class = "char">' + s + '</div>'
         }).join('')
 
+=======
+      rubber: function () {
+        this.myclass = 'rubberBand'
+      },
+      spanChar: function (text) {
+        return text.split('').map(function (char) {
+          return '<span>' + char + '</span>'}).join('');
+>>>>>>> 8b16f46566b883efd58080d60d0bb451ef784ee6
       }
     }
   }
