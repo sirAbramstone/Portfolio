@@ -20,7 +20,7 @@
 
   #preloader {
     position: absolute;
-    left: 40%;
+    left: 45%;
     top: 35%;
   }
 

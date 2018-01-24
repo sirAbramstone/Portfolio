@@ -3,12 +3,7 @@
         <main-menu></main-menu>
         <div class="home_content">
           <div class="wrap_home_content_text">
-            <div v-for="text in texts">
-              <div class="home_content_text"
-                   v-bind:class="myclass"
-                   v-on:mouseover="rubber"
-                   v-on:mouseleave="myclass='none'"
-                   v-html="spanChar(text)"></div>
+            <div class="home_content_text" v-for="text in texts" v-html="charSpan(text)">
             </div>
             <div class="home_content_text_small str">React / Vue / And many other stuff</div>
           </div>
@@ -32,6 +27,11 @@
           button: true,
           btn_home: true
         },
+        texts: [
+          'Hi,',
+          'I`m Danil,',
+          'web developer.'
+        ]
       }
     },
     components: {
@@ -40,9 +40,9 @@
       'Button': Button
     },
     methods: {
-      spanChar: function (text) {
-        return text.split('').map(function (char) {
-          return '<span>' + char + '</span>'}).join('');
+      charSpan: function (text) {
+        return text.split('').map(function (s) {
+          return '<div class = "char">' + s + '</div>'}).join('')
       }
     }
   }
@@ -70,10 +70,33 @@
 
         .home_content_text {
           font-size: $font-size-large;
+          line-height: 1em;
+          font-family:'Raleway';
+
+          &:nth-child(2) .char:nth-child(4), &:nth-child(3) .char:nth-child(4) {
+            padding-left: 15px;
+          }
         }
         .home_content_text_small {
           font-size: $font-size-small;
+          font-family: 'Open Sans', sans-serif;
+          color: $icon;
+          margin-top: 10px;
+          margin-bottom: 30px;
+          letter-spacing: 0.1em;
         }
       }
+    .char {
+      display: inline-block;
+      transition: transform 1s ease-in-out;
+      font-family:'Raleway';
+
+      &:hover {
+        animation-name: rubberBand;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        color: $acid;
+      }
+    }
   }
 </style>
