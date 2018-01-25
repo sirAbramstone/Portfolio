@@ -6,8 +6,6 @@ import './assets/blast';
 
 Vue.use(Router);
 
-
-
 new Vue({
   el: '#app',
   router,
@@ -16,6 +14,3 @@ new Vue({
     App
   }
 });
-
-
-

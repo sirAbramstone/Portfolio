@@ -4,7 +4,7 @@
 		<main-menu></main-menu>
 		<div class="about_content">
 			<div class="about_content_h" v-html="charSpan(textH)"></div>
-			<div class="about_content_txt" v-for="text in texts" v-html="wordSpan(text)">
+			<div class="about_content_txt" v-for="(text, i) in texts" :key="i" v-html="wordSpan(text)">
 			</div>
 		</div>
 	</div>
