@@ -1,7 +1,7 @@
 <template>
   <div id="app">
       <Preloader v-if="loading"></Preloader>
-      <router-view v-else="loading"></router-view>
+      <router-view v-else></router-view>
   </div>
 </template>
 

@@ -5,14 +5,14 @@
         <a href="https://www.google.ru/"></a>
       </div>
       <nav class="navigation">
-        <li v-for="(item, index) of items">
+        <li v-for="(item, index) of items" :key="index">
           <router-link v-bind:to="item">
             <span v-bind:class="[lnr, icon, lnrVar[index]]"></span>
           </router-link>
         </li>
       </nav>
       <nav class="social">
-      <li v-for="(icon, index) of icons">
+      <li v-for="(icon, index) of icons" :key="index">
         <a v-bind:href="icon">
           <i v-bind:class="[fab,
           fabVar[index]]"></i>
