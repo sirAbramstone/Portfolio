@@ -3,17 +3,9 @@
         <main-menu></main-menu>
         <div class="home_content">
           <div class="wrap_home_content_text">
-            <transition-group @after-enter="enter"
-                              name="item"
-                              @after-leave="leave"
-                              tag="div">
-              <span class="home_content_text item" v-if="i < idx" v-for="(text, i) in fullText.split('')" :key="i">
-                {{charSpan(text)}}
-              </span>
-            </transition-group>
             <div class="home_content_text_small str">React / Vue / And many other stuff</div>
           </div>
-          <Button v-bind:class="btnCls" btn_msg="contact me" v-on:click="run" :disabled="idx > 0 && idx < fullText.split('').length"></Button>
+          <Button></Button>
         </div>
         <neon></neon>
       </div>
@@ -29,36 +21,19 @@
     data () {
       return {
         myclass: 'none',
-        idx: 0,
         btnCls: {
           button: true,
           btn_home: true
         },
-        fullText: "Hi, I'm Danil, web developer",
-        texts: [
-          'Hi,',
-          'I`m Danil,',
-          'web developer.'
-        ],
-
       }
     },
     components: {
       'main-menu': MainMenu,
       'neon': NeonBg,
       'Button': Button
-    },
-    methods: {
-      charSpan: function (text) {
-        return text.split('').map(function (s) {
-          return s}).join('')
-      },
     }
+
   }
-
-  ///Функция для ебаной анимации буковъ
-
-
 
 
 </script>
@@ -110,14 +85,4 @@
     }
   }
 
-
-  .item-enter-active,
-  .item-leave-active {
-    transition: opacity .1s;
-  }
-
-  .item-enter,
-  .item-leave-to {
-    opacity: 0;
-  }
 </style>
