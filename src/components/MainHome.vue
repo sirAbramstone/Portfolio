@@ -7,12 +7,12 @@
                               name="item"
                               @after-leave="leave"
                               tag="div">
-              <div class="home_content_text item" v-if="i < idx" v-for="(text, i) in texts" :key="i" v-html="charSpan(text)">
+              <div class="home_content_text item" v-if="i < idx" v-for="(text, i) in fullText.split('')" :key="i" v-html="charSpan(text)">
               </div>
             </transition-group>
             <div class="home_content_text_small str">React / Vue / And many other stuff</div>
           </div>
-          <Button v-bind:class="btnCls" btn_msg="contact me" v-on:click="run"></Button>
+          <Button v-bind:class="btnCls" btn_msg="contact me" v-on:click="run" :disabled="idx > 0 && idx < fullText.split('').length"></Button>
         </div>
         <neon></neon>
       </div>
@@ -33,12 +33,13 @@
           button: true,
           btn_home: true
         },
-        fullText: ["Hi, I'm Danil, web developer"],
+        fullText: "Hi, I'm Danil, web developer",
         texts: [
           'Hi,',
           'I`m Danil,',
           'web developer.'
-        ]
+        ],
+
       }
     },
     components: {
@@ -55,10 +56,10 @@
           return '<span class = "char">' + s + '</span>'}).join('')
       },
       run() {
-        this.idx += ({ 0: 1, [this.texts.length]: -1 })[this.idx]
+        this.idx += ({ 0: 1, [this.fullText.split('').length]: -1 })[this.idx]
       },
       enter() {
-        setTimeout(() => this.idx = Math.min(this.texts.length, this.idx + 1), 200)
+        setTimeout(() => this.idx = Math.min(this.fullText.split('').length, this.idx + 1), 200)
       },
       leave() {
         setTimeout(() => this.idx = Math.max(0, this.idx - 1), 200)
