@@ -89,6 +89,7 @@
         padding-left: 5%;
 
         .home_content_text {
+          display: inline-block;
           font-size: $font-size-large;
           line-height: 1em;
           font-family:'Raleway';
