@@ -7,8 +7,9 @@
                               name="item"
                               @after-leave="leave"
                               tag="div">
-              <div class="home_content_text item" v-if="i < idx" v-for="(text, i) in fullText.split('')" :key="i" v-html="charSpan(text)">
-              </div>
+              <span class="home_content_text item" v-if="i < idx" v-for="(text, i) in fullText.split('')" :key="i">
+                {{charSpan(text)}}
+              </span>
             </transition-group>
             <div class="home_content_text_small str">React / Vue / And many other stuff</div>
           </div>
@@ -47,23 +48,11 @@
       'neon': NeonBg,
       'Button': Button
     },
-    mounted () {
-      this.run()
-    },
     methods: {
       charSpan: function (text) {
         return text.split('').map(function (s) {
-          return '<span class = "char">' + s + '</span>'}).join('')
+          return s}).join('')
       },
-      run() {
-        this.idx += ({ 0: 1, [this.fullText.split('').length]: -1 })[this.idx]
-      },
-      enter() {
-        setTimeout(() => this.idx = Math.min(this.fullText.split('').length, this.idx + 1), 200)
-      },
-      leave() {
-        setTimeout(() => this.idx = Math.max(0, this.idx - 1), 200)
-      }
     }
   }
 
@@ -124,7 +113,7 @@
 
   .item-enter-active,
   .item-leave-active {
-    transition: opacity .4s;
+    transition: opacity .1s;
   }
 
   .item-enter,
