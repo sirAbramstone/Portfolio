@@ -1,11 +1,14 @@
-
 <template>
 	<div class="wrap_about">
 		<main-menu></main-menu>
+
 		<div class="about_content">
-			<div class="about_content_h" v-html="charSpan(textH)"></div>
-			<div class="about_content_txt" v-for="(text, i) in texts" :key="i" v-html="wordSpan(text)">
-			</div>
+			<div class="wrap_about_content_text">
+
+        <div class="blast-root" v-html="fullText"></div>
+
+        <div class="about_content_text_small" v-for="text in texts">{{ text }}</div>
+      </div>
 		</div>
 	</div>
 </template>
@@ -17,7 +20,7 @@
 		name: 'About',
     data () {
 		  return {
-		    textH: 'About me',
+		    fullText: 'About me',
         texts: [
           'Lorem ipsum dolor sit amet, eam stet elit explicari in, ei sit aperiam expetenda. Laboramus appellantur contentiones pro ut, ad mentitum laboramus elaboraret cum.',
           'Habeo timeam scribentur at pri, eam solum impedit et. Ea vidisse minimum nec, ei causae scribentur mel, quo dictas vituperatoribus an. Per ea erant munere assueverit.',
@@ -29,17 +32,40 @@
 		components: {
 			'main-menu': MainMenu
 		},
-    methods: {
-      wordSpan: function (text) {
-        return text.split(' ').map(function (s) {
-          return '<div class = "word">' + s + '</div>'}).join(' ');
-      },
-      charSpan: function (textH) {
-        return textH.split('').map(function (s) {
-        return '<div class = "char">' + s + '</div>'}).join('');
+
+    mounted () {
+
+        $(".blast-root").blast({
+          delimiter: "character",
+          tag: "span"
+        })
+
+        let a = 0
+
+        $(".blast-root .blast").each(function () {
+
+          let el = $(this);
+
+          setTimeout(function () {
+            el.addClass('animated bounceIn')
+          }, a)
+
+          if (a < 800) a += 50;
+        });
+
+        setTimeout( () => {
+          $(".blast-root .blast").removeClass('animated bounceIn')
+          $(".blast-root .blast").css('opacity', 1);
+          $(".blast-root .blast").mouseenter(function () {
+            var el = $(this)
+            $(this).addClass('animated rubberBand');
+            $(this).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend enimationend', function () {
+              el.removeClass('animated rubberBand')
+            })
+          })
+        }, 800)
       }
     }
-	}
 </script>
 
 <style lang="scss">
@@ -57,15 +83,17 @@
 			padding-top: 5%;
 			padding-left: 5%;
 
-			.about_content_h {
-				@include content-h2;
-				width: 38%;
-				margin-bottom: 20px;
+			.blast-root {
+        word-spacing: 10px;
+      }
 
-        .char {
-          display: inline-block;
-          transition: transform 1s ease-in-out;
-          font-family:'Raleway';
+      .blast {
+        display: inline-block;
+        font-size: $font-size-large;
+        line-height: 1em;
+        font-family: 'Raleway';
+        transition: all .3s ease-out;
+        opacity: 0;
 
           &:nth-child(6) {
             padding-left: 15px;
@@ -78,9 +106,8 @@
             color: $acid;
           }
         }
-			}
 
-			.about_content_txt {
+			.about_content_text_small {
 				@include content-txt;
         margin-top: 10px;
         margin-bottom: 10px;
