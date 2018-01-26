@@ -1,6 +1,6 @@
 <!--suppress ALL -->
 <template>
-  <button>
+  <button v-on:click="() => { click() }">
     {{ btn_msg }}
   </button>
 </template>
@@ -8,7 +8,7 @@
 <script>
   export default {
     name: 'Button',
-    props: ['btn_msg']
+    props: ['btn_msg', 'click']
   }
 </script>
 
