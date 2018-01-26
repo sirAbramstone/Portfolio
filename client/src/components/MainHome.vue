@@ -3,7 +3,18 @@
     <main-menu></main-menu>
     <div class="home_content">
       <div class="wrap_home_content_text">
-        <div class="blast-root" v-html="fullText">
+        <div class="blast-root">
+          <template v-for="(char, i) in chars">
+            <span 
+              class="blast"
+              aria-hidden="true"
+              :key="'span-' + i"
+              v-html="char"
+              v-bind:class="{ space: char === ' ' }"
+              >
+            </span>
+            <br v-if="char === ' ' && chars[i - 1] === ','" :key="'br-' + i" />
+          </template>
         </div>
         <div class="home_content_text_small str">React / Vue / And many other stuff</div>
       </div>
@@ -29,7 +40,13 @@
           button: true,
           btn_home: true
         },
-        fullText: "Hi, <br>I'm Danil, <br>web developer"
+        fullText: "Hi, I'm Danil, web developer"
+      }
+    },
+
+    computed: {
+      chars: function () {
+        return this.fullText.split('')
       }
     },
 
@@ -40,40 +57,53 @@
     },
 
     mounted () {
+      setTimeout(() => this.init(), 300)
+    },
 
-      $(".blast-root").blast({
-        delimiter: "character",
-        tag: "span"
-      })
+    methods: {
 
-      let a = 0
-
-      $(".blast-root .blast").each(function () {
-
-        let el = $(this)
-
-        setTimeout(function () {
-          el.addClass('animated bounceIn')
-        }, a)
-
-        if (a < 1200) {
-          a = a + 100
-        } else {
-          a = a + 80
+      /**
+       * Initialization animation of fullText
+       */
+      init () {
+        const chars = document.querySelectorAll('.blast-root .blast')
+        let a = 0
+        
+        for (let char of chars) {
+          setTimeout(() => char.classList.add('animated', 'bounceIn'), a)
+          if (a < 1200) {
+            a += 100
+          } else {
+            a += 80
+          }
         }
-      });
 
-      setTimeout(() => {
-        $(".blast-root .blast").removeClass('animated bounceIn')
-        $(".blast-root .blast").css('opacity', 1)
-        $(".blast-root .blast").mouseenter(function () {
-          var el = $(this)
-          $(this).addClass('animated rubberBand')
-          $(this).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-            el.removeClass('animated rubberBand')
+        setTimeout(() => this.initHoverEffects(chars), 3000)
+      },
+            
+      /**
+       * Initialization of hover effects, after animation.
+       */
+      initHoverEffects (chars) {
+        for (let char of chars) {
+          char.classList.remove('animated', 'bounceIn')
+          char.style.opacity = 1
+
+          char.addEventListener('mouseenter', (e) => {
+            e.target.classList.add('animated', 'rubberBand')
+
+            const events = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
+
+            for (event of events.split(' ')) {
+              e.target.addEventListener(event, function handler () {
+                e.target.classList.remove('animated', 'rubberBand')
+                e.target.removeEventListener(event, handler)
+              })
+            }
           })
-        })
-      }, 3000)
+        }
+      }
+
     }
   }
 </script>
@@ -91,9 +121,6 @@
         flex-direction: column;
         justify-content: center;
         padding-left: 5%;
-        .blast-root {
-          word-spacing: 10px;
-        }
         .blast {
           display: inline-block;
           font-size: $font-size-large;
@@ -101,7 +128,9 @@
           font-family:'Raleway';
           transition: all .3s ease-out;
           opacity: 0;
-
+          &.space {
+            width: 15px;
+          }
           &:hover {
             color: $acid;
           }
