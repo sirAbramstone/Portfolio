@@ -18,7 +18,7 @@
         </div>
         <div class="home_content_text_small str">React / Vue / And many other stuff</div>
       </div>
-      <Button v-bind:class="btnCls" btn_msg="contact me"></Button>
+      <Button v-bind:click="ohYeah" v-bind:class="btnCls" btn_msg="contact me"></Button>
     </div>
     <neon></neon>
   </div>
@@ -61,6 +61,21 @@
     },
 
     methods: {
+      
+      /**
+       * Oh... yeah,
+       * just click on 'CONTACT ME' button
+       */
+      ohYeah () {
+        const chars = document.querySelectorAll('.blast-root .blast')
+        for (let char of chars) {
+          char.style.opacity = 0
+        }
+        this.fullText = "Oh... yeah, you touch my, tra-la-la"
+        this.$nextTick(() => {
+          this.init()
+        })
+      },
 
       /**
        * Initialization animation of fullText
@@ -68,7 +83,7 @@
       init () {
         const chars = document.querySelectorAll('.blast-root .blast')
         let a = 0
-        
+        document.querySelector('.blast-root').style.pointerEvents = 'none'
         for (let char of chars) {
           setTimeout(() => char.classList.add('animated', 'bounceIn'), a)
           if (a < 1200) {
@@ -77,8 +92,7 @@
             a += 80
           }
         }
-
-        setTimeout(() => this.initHoverEffects(chars), 3000)
+        setTimeout(() => this.initHoverEffects(chars), a + 400)
       },
             
       /**
@@ -88,6 +102,7 @@
         for (let char of chars) {
           char.classList.remove('animated', 'bounceIn')
           char.style.opacity = 1
+          document.querySelector('.blast-root').style.pointerEvents = ''
 
           char.addEventListener('mouseenter', (e) => {
             e.target.classList.add('animated', 'rubberBand')
