@@ -1,17 +1,12 @@
 <template>
   <div class="wrap_home">
     <main-menu></main-menu>
-
     <div class="home_content">
       <div class="wrap_home_content_text">
-
         <div class="blast-root" v-html="fullText">
-          
         </div>
-
         <div class="home_content_text_small str">React / Vue / And many other stuff</div>
       </div>
-
       <Button v-bind:class="btnCls" btn_msg="contact me"></Button>
     </div>
     <neon></neon>
@@ -23,7 +18,7 @@
   import MainMenu from './MainMenu';
   import NeonBg from './NeonBg';
   import Button from './Button';
-  
+
   export default {
     name: 'Home',
 
@@ -34,12 +29,7 @@
           button: true,
           btn_home: true
         },
-        fullText: "Hi, <br>I'm Danil, <br>web developer",
-        texts: [
-          'Hi,',
-          'I`m Danil,',
-          'web developer.'
-        ]
+        fullText: "Hi, <br>I'm Danil, <br>web developer"
       }
     },
 
@@ -50,7 +40,7 @@
     },
 
     mounted () {
-    
+
       $(".blast-root").blast({
         delimiter: "character",
         tag: "span"
@@ -59,13 +49,6 @@
       let a = 0
 
       $(".blast-root .blast").each(function () {
-        if (a==300) a = 400
-        if (a==1100) a = 1200
-        if (a==400) {
-          setTimeout(function () {
-            $(".blast-root h1 img").addClass('animation-logo')
-          }, 800);
-        }
 
         let el = $(this)
 
@@ -119,8 +102,8 @@
           transition: all .3s ease-out;
           opacity: 0;
 
-          &:nth-child(2) .char:nth-child(4), &:nth-child(3) .char:nth-child(4) {
-            padding-left: 15px;
+          &:hover {
+            color: $acid;
           }
         }
         .home_content_text_small {
@@ -132,26 +115,6 @@
           letter-spacing: 0.1em;
         }
       }
-    .char {
-      display: inline-block;
-      transition: transform 1s ease-in-out;
-      font-family:'Raleway';
-
-      &:hover {
-        animation-name: rubberBand;
-        animation-duration: 1.6s;
-        animation-fill-mode: both;
-        color: $acid;
-      }
-    }
-  }
-
-  .item-enter-active, .item-leave-active {
-    transition: opacity .03s;
-  }
-
-  .item-enter, .item-leave-to {
-    opacity: 0;
   }
 
 </style>
