@@ -7,7 +7,7 @@
 
         <div class="blast-root" v-html="fullText"></div>
 
-        <div class="about_content_text_small" v-for="text in texts">{{ text }}</div>
+        <div class="about_content_text_small" v-for="(text, i) in texts" :key="i">{{ text }}</div>
       </div>
 		</div>
 	</div>
