@@ -7,14 +7,15 @@ import MainAbout from '../components/MainAbout';
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
-      path:'/',
+      path: '/',
       name: 'Home',
       component: MainHome
     },
     {
-      path:'/skills',
+      path: '/skills',
       name: 'Skills',
       component: MainSkills
     },
