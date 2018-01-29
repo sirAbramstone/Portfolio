@@ -15,8 +15,20 @@
               >
             </span>
           </template>
+          <div class="about_content_text">
+            <template v-for="(word, i) in words">
+              <span
+                class="blast-text"
+                aria-hidden="true"
+                :key="'span-1' + i"
+                v-html="word"
+                v-bind:class="{ space: word === ' ' }"
+                >
+              </span>
+              <br v-if="word[word.length - 1] === '.'" :key="'br-' + i" />
+            </template>
+          </div>
         </div>
-        <div class="about_content_text"></div>
       </div>
 		</div>
 	</div>
@@ -30,17 +42,15 @@
     data() {
       return {
         fullText: 'About me',
-        texts: [
-          'Lorem ipsum dolor sit amet, eam stet elit explicari in, ei sit aperiam expetenda. Laboramus appellantur contentiones pro ut, ad mentitum laboramus elaboraret cum.',
-          'Habeo timeam scribentur at pri, eam solum impedit et. Ea vidisse minimum nec, ei causae scribentur mel, quo dictas vituperatoribus an. Per ea erant munere assueverit.',
-          'Cu saepe euripidis cum, eum suas postulant consectetuer ea, id mea facilis accusata. At est verterem dissentias, adhuc error posidonium quo cu.',
-          'Pri ea nostro denique luptatum, saperet recteque ea sea. Sea ex percipit reformidans, eu quidam quodsi tincidunt eam. Ex per ferri pericula.'
-        ]
+        text: 'Lorem ipsum dolor sit amet, eam stet elit explicari in, ei sit aperiam expetenda. Laboramus appellantur contentiones pro ut, ad mentitum laboramus elaboraret cum. Habeo timeam scribentur at pri, eam solum impedit et. Ea vidisse minimum nec, ei causae scribentur mel, quo dictas vituperatoribus an. Per ea erant munere assueverit.Cu saepe euripidis cum, eum suas postulant consectetuer ea, id mea facilis accusata. At est verterem dissentias, adhuc error posidonium quo cu. Pri ea nostro denique luptatum, saperet recteque ea sea. Sea ex percipit reformidans, eu quidam quodsi tincidunt eam. Ex per ferri pericula.'
       }
     },
     computed: {
       chars: function () {
         return this.fullText.split('')
+      },
+      words: function () {
+        return this.text.split(' ')
       }
     },
 
@@ -49,7 +59,8 @@
     },
 
     mounted () {
-      setTimeout(() => this.init(), 300)
+      setTimeout(() => this.init(), 300),
+        setTimeout(() => this.initText(), 300)
     },
 
     methods: {
@@ -87,6 +98,28 @@
             }
           })
         }
+      },
+      initText () {
+        const words = document.querySelectorAll('.blast-root .blast-text')
+        setTimeout(() => this.initTextHoverEffects(words), 400)
+      },
+      initTextHoverEffects (words) {
+        for (let word of words) {
+          document.querySelector('.blast-root').style.pointerEvents = ''
+
+          word.addEventListener('mouseenter', (e) => {
+            e.target.classList.add('animated', 'rubberBand')
+
+            const events = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
+
+            for (event of events.split(' ')) {
+              e.target.addEventListener(event, function handler () {
+                e.target.classList.remove('animated', 'rubberBand')
+                e.target.removeEventListener(event, handler)
+              })
+            }
+          })
+        }
       }
     }
   }
@@ -102,14 +135,10 @@
 		height: $height;
 
 		.about_content {
-			@include flex-content;
-			letter-spacing: .5px;
-			padding-top: 5%;
+			display: inherit;
+      flex-direction: column;
+      justify-content: center;
 			padding-left: 5%;
-
-			.blast-root {
-        word-spacing: 10px;
-      }
 
       .blast {
         display: inline-block;
@@ -118,6 +147,7 @@
         font-family: 'Raleway';
         transition: all .3s ease-out;
         opacity: 0;
+        padding-bottom: 20px;
 
           &:nth-child(6) {
             padding-left: 15px;
@@ -130,26 +160,14 @@
             color: $acid;
           }
         }
-
-			.about_content_text_small {
-				@include content-txt;
-        margin-top: 10px;
-        margin-bottom: 10px;
-				width: 45%;
-
-				.word {
+      .about_content_text {
+        display: inherit;
+        width: 80%;
+        .blast-text {
           display: inline-block;
-          transition: transform 1s ease-in-out;
-          color: $white;
-
-          &:hover {
-            animation-name: rubberBand;
-            animation-duration: 1s;
-            animation-fill-mode: both;
-            color: $white;
-          }
+          font-size: $font-size-small;
         }
-			}
-		}
+      }
+    }
 	}
 </style>
