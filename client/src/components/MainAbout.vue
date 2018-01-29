@@ -4,10 +4,19 @@
 
 		<div class="about_content">
 			<div class="wrap_about_content_text">
-
-        <div class="blast-root" v-html="fullText"></div>
-
-        <div class="about_content_text_small" v-for="(text, i) in texts" :key="i">{{ text }}</div>
+        <div class="blast-root">
+          <template v-for="(char, i) in chars">
+            <span
+              class="blast"
+              aria-hidden="true"
+              :key="'span-' + i"
+              v-html="char"
+              v-bind:class="{ space: char === ' ' }"
+              >
+            </span>
+          </template>
+        </div>
+        <div class="about_content_text"></div>
       </div>
 		</div>
 	</div>
@@ -17,10 +26,10 @@
 	import MainMenu from './MainMenu';
 
 	export default {
-		name: 'About',
-    data () {
-		  return {
-		    fullText: 'About me',
+    name: 'About',
+    data() {
+      return {
+        fullText: 'About me',
         texts: [
           'Lorem ipsum dolor sit amet, eam stet elit explicari in, ei sit aperiam expetenda. Laboramus appellantur contentiones pro ut, ad mentitum laboramus elaboraret cum.',
           'Habeo timeam scribentur at pri, eam solum impedit et. Ea vidisse minimum nec, ei causae scribentur mel, quo dictas vituperatoribus an. Per ea erant munere assueverit.',
@@ -29,43 +38,58 @@
         ]
       }
     },
-		components: {
-			'main-menu': MainMenu
-		},
+    computed: {
+      chars: function () {
+        return this.fullText.split('')
+      }
+    },
+
+    components: {
+      'main-menu': MainMenu
+    },
 
     mounted () {
+      setTimeout(() => this.init(), 300)
+    },
 
-        $(".blast-root").blast({
-          delimiter: "character",
-          tag: "span"
-        })
-
+    methods: {
+      init () {
+        const chars = document.querySelectorAll('.blast-root .blast')
         let a = 0
+        document.querySelector('.blast-root').style.pointerEvents = 'none'
+        for (let char of chars) {
+          setTimeout(() => char.classList.add('animated', 'bounceIn'), a)
+          if (a < 1200) {
+            a += 100
+          } else {
+            a += 80
+          }
+        }
+        setTimeout(() => this.initHoverEffects(chars), a + 400)
+      },
 
-        $(".blast-root .blast").each(function () {
+      initHoverEffects (chars) {
+        for (let char of chars) {
+          char.classList.remove('animated', 'bounceIn')
+          char.style.opacity = 1
+          document.querySelector('.blast-root').style.pointerEvents = ''
 
-          let el = $(this);
+          char.addEventListener('mouseenter', (e) => {
+            e.target.classList.add('animated', 'rubberBand')
 
-          setTimeout(function () {
-            el.addClass('animated bounceIn')
-          }, a)
+            const events = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
 
-          if (a < 800) a += 50;
-        });
-
-        setTimeout( () => {
-          $(".blast-root .blast").removeClass('animated bounceIn')
-          $(".blast-root .blast").css('opacity', 1);
-          $(".blast-root .blast").mouseenter(function () {
-            var el = $(this)
-            $(this).addClass('animated rubberBand');
-            $(this).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend enimationend', function () {
-              el.removeClass('animated rubberBand')
-            })
+            for (event of events.split(' ')) {
+              e.target.addEventListener(event, function handler () {
+                e.target.classList.remove('animated', 'rubberBand')
+                e.target.removeEventListener(event, handler)
+              })
+            }
           })
-        }, 800)
+        }
       }
     }
+  }
 </script>
 
 <style lang="scss">
