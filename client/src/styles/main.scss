@@ -12,45 +12,45 @@ $icon: #4d4d4e;
 $height: 100vh;
 $gradient: radial-gradient(ellipse at center, rgb(49, 44, 24) 0%, rgba(0, 0, 0, 0.73) 100%);
 $stack: #8d8d8d;
-
+$pad-l: 5%;
 
 @mixin flex-box {
-	display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 @mixin flex-content {
-	display: inherit;
-	flex-direction: column;
-	justify-content: start;
-	align-items: flex-start;
+  display: inherit;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
 }
 
 @mixin luxury-button {
-	border-color: $acid;
-	border-radius: 2px;
-	border-width: 1px;
-	width: 150px;
-	height: 30px;
-	text-transform: uppercase;
-	color: $acid;
-	letter-spacing: 3px;
-	font-size: 12px;
+  border-color: $acid;
+  border-radius: 2px;
+  border-width: 1px;
+  width: 150px;
+  height: 30px;
+  text-transform: uppercase;
+  color: $acid;
+  letter-spacing: 3px;
+  font-size: 12px;
   background: $gradient;
 }
 
 @mixin content-h2 {
-	color: $acid;
-	font-size: $font-size-large;
-	font-weight: bolder;
-	line-height: 1.5em;
+  color: $acid;
+  font-size: $font-size-large;
+  font-weight: bolder;
+  line-height: 1.5em;
 }
 
 @mixin content-txt {
-	flex-direction: column;
-	font-size: $font-size-small;
-	line-height: 1.3em;
+  flex-direction: column;
+  font-size: $font-size-small;
+  line-height: 1.3em;
 }
