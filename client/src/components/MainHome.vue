@@ -1,26 +1,26 @@
 <template>
   <div class="wrap_home">
-    <main-menu></main-menu>
+    <main-menu/>
     <div class="home_content">
       <div class="wrap_home_content_text">
         <div class="blast-root">
           <template v-for="(char, i) in chars">
-            <span 
+            <span
               class="blast"
               aria-hidden="true"
               :key="'span-' + i"
               v-html="char"
               v-bind:class="{ space: char === ' ' }"
-              >
+            >
             </span>
-            <br v-if="char === ' ' && chars[i - 1] === ','" :key="'br-' + i" />
+            <br v-if="char === ' ' && chars[i - 1] === ','" :key="'br-' + i"/>
           </template>
         </div>
         <div class="home_content_text_small str">React / Vue / And many other stuff</div>
       </div>
       <Button v-bind:click="ohYeah" v-bind:class="btnCls" btn_msg="contact me"></Button>
     </div>
-    <neon></neon>
+    <neon/>
   </div>
 </template>
 
@@ -33,7 +33,7 @@
   export default {
     name: 'Home',
 
-    data () {
+    data() {
       return {
         myclass: 'none',
         btnCls: {
@@ -41,7 +41,7 @@
           btn_home: true
         },
         fullText: "Hi, I'm Danil, web developer"
-      }
+      };
     },
 
     computed: {
@@ -56,17 +56,17 @@
       'Button': Button
     },
 
-    mounted () {
+    mounted() {
       setTimeout(() => this.init(), 300)
     },
 
     methods: {
-      
+
       /**
        * Oh... yeah,
        * just click on 'CONTACT ME' button
        */
-      ohYeah () {
+      ohYeah() {
         const chars = document.querySelectorAll('.blast-root .blast')
         for (let char of chars) {
           char.style.opacity = 0
@@ -80,12 +80,12 @@
       /**
        * Initialization animation of fullText
        */
-      init () {
+      init() {
         const chars = document.querySelectorAll('.blast-root .blast')
         let a = 0
-        document.querySelector('.blast-root').style.pointerEvents = 'none'
+        document.querySelector('.blast-root').style.pointerEvents = 'none';
         for (let char of chars) {
-          setTimeout(() => char.classList.add('animated', 'bounceIn'), a)
+          setTimeout(() => char.classList.add('animated', 'bounceIn'), a);
           if (a < 1200) {
             a += 100
           } else {
@@ -94,15 +94,15 @@
         }
         setTimeout(() => this.initHoverEffects(chars), a + 400)
       },
-            
+
       /**
        * Initialization of hover effects, after animation.
        */
-      initHoverEffects (chars) {
+      initHoverEffects(chars) {
         for (let char of chars) {
-          char.classList.remove('animated', 'bounceIn')
-          char.style.opacity = 1
-          document.querySelector('.blast-root').style.pointerEvents = ''
+          char.classList.remove('animated', 'bounceIn');
+          char.style.opacity = 1;
+          document.querySelector('.blast-root').style.pointerEvents = '';
 
           char.addEventListener('mouseenter', (e) => {
             e.target.classList.add('animated', 'rubberBand')
@@ -110,7 +110,7 @@
             const events = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
 
             for (event of events.split(' ')) {
-              e.target.addEventListener(event, function handler () {
+              e.target.addEventListener(event, function handler() {
                 e.target.classList.remove('animated', 'rubberBand')
                 e.target.removeEventListener(event, handler)
               })
@@ -121,6 +121,7 @@
 
     }
   }
+
 </script>
 
 <style lang="scss">
@@ -131,34 +132,34 @@
     width: 100%;
     display: flex;
 
-      .home_content {
-        display: inherit;
-        flex-direction: column;
-        justify-content: center;
-        padding-left: 5%;
-        .blast {
-          display: inline-block;
-          font-size: $font-size-large;
-          line-height: 1em;
-          font-family:'Raleway';
-          transition: all .3s ease-out;
-          opacity: 0;
-          &.space {
-            width: 15px;
-          }
-          &:hover {
-            color: $acid;
-          }
+    .home_content {
+      display: inherit;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 5%;
+      .blast {
+        display: inline-block;
+        font-size: $font-size-large;
+        line-height: 1em;
+        font-family: 'Raleway', serif;
+        transition: all .3s ease-out;
+        opacity: 0;
+        &.space {
+          width: 15px;
         }
-        .home_content_text_small {
-          font-size: $font-size-small;
-          font-family: 'Open Sans', sans-serif;
-          color: $icon;
-          margin-top: 10px;
-          margin-bottom: 30px;
-          letter-spacing: 0.1em;
+        &:hover {
+          color: $acid;
         }
       }
+      .home_content_text_small {
+        font-size: $font-size-small;
+        font-family: 'Open Sans', sans-serif;
+        color: $icon;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        letter-spacing: 0.1em;
+      }
+    }
   }
 
 </style>
