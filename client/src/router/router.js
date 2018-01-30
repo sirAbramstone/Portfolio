@@ -4,6 +4,8 @@ import MainHome from '../components/MainHome';
 import MainSkills from '../components/MainSkills';
 import MainAbout from '../components/MainAbout';
 import MainWork from '../components/MainWork';
+import MainContact from '../components/MainContact';
+
 
 Vue.use(Router);
 
@@ -29,6 +31,11 @@ export default new Router({
       path: '/work',
       name: 'Work',
       component: MainWork
+    },
+    {
+      path: '/contact',
+      name: 'Work',
+      component: MainContact
     }
   ]
 })
