@@ -40,9 +40,9 @@
         icon: 'icon',
         lnrVar: [
           'lnr-home',
-          'lnr-layers',
           'lnr-code',
           'lnr-user',
+          'lnr-layers',
           'lnr-envelope'
         ],
         icons: [
