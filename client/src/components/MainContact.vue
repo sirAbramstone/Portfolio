@@ -16,28 +16,34 @@
             </span>
           </template>
         </div>
-        <div class="contact_content_text_small">If you have any questions, please don’t hesitate to contact using form
-          below…
+        <div class="contact_content_text_small">If you have any questions, I don`t give a fuck…
         </div>
       </div>
+      <Button v-bind:class="btnCls" btn_msg="send"></Button>
     </div>
   </div>
 </template>
 
 <script>
   import MainMenu from './MainMenu';
+  import Button from './Button';
 
   export default {
     name: 'Contact',
 
     data() {
       return {
+        btnCls: {
+          button: true,
+          btn_contact: true
+        },
         fullText: "Contact me"
       }
     },
 
     components: {
       'main-menu': MainMenu,
+      'Button': Button
     },
 
     computed: {
