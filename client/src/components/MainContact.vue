@@ -118,7 +118,11 @@
 
   iframe {
     height: 100%;
-    filter: opacity(.5);
+    filter: opacity(.5) saturate(30%);;
+  }
+
+  .wrap_google{
+    width: 50%;
   }
 
   .wrap_contact {
