@@ -2,7 +2,7 @@
   <div id="main-menu">
     <div class="wrap-menu">
       <div class="logo">
-        <a href="https://www.google.ru/"></a>
+        <neon-logo></neon-logo>
       </div>
       <nav class="navigation">
         <li v-for="(item, index) of items" :key="index">
@@ -25,6 +25,9 @@
 </template>
 
 <script>
+
+  import NeonLogo from './NeonLogo.vue';
+
   export default {
     name: 'Menu',
     data () {
@@ -59,6 +62,10 @@
           'fa-telegram-plane'
         ]
       }
+    },
+    components: {
+      NeonLogo,
+      'neon-logo': NeonLogo
     }
   }
 </script>
