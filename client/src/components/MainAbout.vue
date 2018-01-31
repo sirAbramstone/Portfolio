@@ -1,9 +1,9 @@
 <template>
-	<div class="wrap_about">
-		<main-menu></main-menu>
+  <div class="wrap_about">
+    <main-menu></main-menu>
 
-		<div class="about_content">
-			<div class="wrap_about_content_text">
+    <div class="about_content">
+      <div class="wrap_about_content_text">
         <div class="blast-root">
           <template v-for="(char, i) in chars">
             <span
@@ -12,7 +12,7 @@
               :key="'span-' + i"
               v-html="char"
               v-bind:class="{ space: char === ' ' }"
-              >
+            >
             </span>
           </template>
           <div class="about_content_text">
@@ -23,21 +23,21 @@
                 :key="'span-1' + i"
                 v-html="word"
                 v-bind:class="{ space: word === ' ' }"
-                >
+              >
               </span>
-              <br v-if="word[word.length - 1] === '.'" :key="'br-' + i" />
+              <br v-if="word[word.length - 1] === '.'" :key="'br-' + i"/>
             </template>
           </div>
         </div>
       </div>
-		</div>
-	</div>
+    </div>
+  </div>
 </template>
 
 <script>
-	import MainMenu from './MainMenu';
+  import MainMenu from './MainMenu';
 
-	export default {
+  export default {
     name: 'About',
     data() {
       return {
@@ -58,13 +58,13 @@
       'main-menu': MainMenu
     },
 
-    mounted () {
+    mounted() {
       setTimeout(() => this.init(), 300),
         setTimeout(() => this.initText(), 300)
     },
 
     methods: {
-      init () {
+      init() {
         const chars = document.querySelectorAll('.blast-root .blast')
         let a = 0
         document.querySelector('.blast-root').style.pointerEvents = 'none'
@@ -79,7 +79,7 @@
         setTimeout(() => this.initHoverEffects(chars), a + 400)
       },
 
-      initHoverEffects (chars) {
+      initHoverEffects(chars) {
         for (let char of chars) {
           char.classList.remove('animated', 'bounceIn')
           char.style.opacity = 1
@@ -91,7 +91,7 @@
             const events = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
 
             for (event of events.split(' ')) {
-              e.target.addEventListener(event, function handler () {
+              e.target.addEventListener(event, function handler() {
                 e.target.classList.remove('animated', 'rubberBand')
                 e.target.removeEventListener(event, handler)
               })
@@ -99,11 +99,11 @@
           })
         }
       },
-      initText () {
+      initText() {
         const words = document.querySelectorAll('.blast-root .blast-text')
         setTimeout(() => this.initTextHoverEffects(words), 400)
       },
-      initTextHoverEffects (words) {
+      initTextHoverEffects(words) {
         for (let word of words) {
           document.querySelector('.blast-root').style.pointerEvents = ''
 
@@ -113,7 +113,7 @@
             const events = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
 
             for (event of events.split(' ')) {
-              e.target.addEventListener(event, function handler () {
+              e.target.addEventListener(event, function handler() {
                 e.target.classList.remove('animated', 'rubberBand')
                 e.target.removeEventListener(event, handler)
               })
@@ -126,19 +126,19 @@
 </script>
 
 <style lang="scss">
-	@import "../styles/main";
+  @import "../styles/main";
 
-	.wrap_about {
-		display: flex;
-		width: 100%;
-		background: $gradient;
-		height: $height;
+  .wrap_about {
+    display: flex;
+    width: 100%;
+    background: $gradient;
+    height: $height;
 
-		.about_content {
-			display: inherit;
+    .about_content {
+      display: inherit;
       flex-direction: column;
       justify-content: center;
-			padding-left: 5%;
+      padding-left: 5%;
 
       .blast {
         display: inline-block;
@@ -149,17 +149,17 @@
         opacity: 0;
         padding-bottom: 20px;
 
-          &:nth-child(6) {
-            padding-left: 15px;
-          }
-
-          &:hover {
-            animation-name: rubberBand;
-            animation-duration: 1s;
-            animation-fill-mode: both;
-            color: $acid;
-          }
+        &:nth-child(6) {
+          padding-left: 15px;
         }
+
+        &:hover {
+          animation-name: rubberBand;
+          animation-duration: 1s;
+          animation-fill-mode: both;
+          color: $acid;
+        }
+      }
       .about_content_text {
         display: inherit;
         width: 80%;
@@ -169,5 +169,5 @@
         }
       }
     }
-	}
+  }
 </style>

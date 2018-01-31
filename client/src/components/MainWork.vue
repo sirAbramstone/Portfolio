@@ -132,41 +132,37 @@
 <script>
   import MainMenu from './MainMenu'
 
-
   export default {
     name: 'Work',
-
-
-
     components: {
       'main-menu': MainMenu
     },
     mounted() {
-        $(".magicwall").magicWall({
-          maxItemHeight: 300,
-          maxItemWidth: 300,
-          delay: 400,
-          loadingMode:"chain",
-          preloadBeforeSwitch: true,
-          pauseOnHover: "item",
-          animations: "flipY,rollOutX,-rollOutX,rollOutY,-rollOutY,slideColumn,-slideColumn,slideRow,-slideRow,fade",
-          duration:800
+      $(".magicwall").magicWall({
+        maxItemHeight: 300,
+        maxItemWidth: 300,
+        delay: 400,
+        loadingMode: "chain",
+        preloadBeforeSwitch: true,
+        pauseOnHover: "item",
+        animations: "flipY,rollOutX,-rollOutX,rollOutY,-rollOutY,slideColumn,-slideColumn,slideRow,-slideRow,fade",
+        duration: 800
 
-        });
+      });
 
-        $(".colorbox").colorbox({
-          maxWidth:"90%",
-          maxHeight:"90%",
-          onOpen: function(){
-            $(".magicwall").magicWall("stop");
-          },
+      $(".colorbox").colorbox({
+        maxWidth: "90%",
+        maxHeight: "90%",
+        onOpen: function () {
+          $(".magicwall").magicWall("stop");
+        },
 
-          onClosed: function(){
-            $(".magicwall").magicWall("start");
-          }
-        });
+        onClosed: function () {
+          $(".magicwall").magicWall("start");
+        }
+      });
 
-      }
+    }
   };
 </script>
 
@@ -174,12 +170,12 @@
   @import "../styles/main";
   @import "../styles/third-party";
 
-  .wrap_work{
+  .wrap_work {
     background: $gradient;
     display: flex;
 
-      #demo{
-        width: 100%;
-      }
+    #demo {
+      width: 100%;
+    }
   }
 </style>
