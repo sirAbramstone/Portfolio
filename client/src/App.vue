@@ -32,6 +32,7 @@
   body {
     margin: 0;
     padding: 0;
+    font-size: 14px;
     background: $dark;
     font-family: 'Open Sans', sans-serif;
     color: $white;

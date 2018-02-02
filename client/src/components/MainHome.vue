@@ -137,20 +137,20 @@
       flex-direction: column;
       justify-content: center;
       padding-left: 5%;
-      .blast {
-        display: inline-block;
-        font-size: $font-size-large;
-        line-height: 1em;
-        font-family: 'Raleway', serif;
-        transition: all .3s ease-out;
-        opacity: 0;
-        &.space {
-          width: 15px;
+        .blast {
+          display: inline-block;
+          font-size: $font-size-large;
+          line-height: 1em;
+          font-family: 'Raleway', serif;
+          transition: all .3s ease-out;
+          opacity: 0;
+          &.space {
+            width: 15px;
+          }
+          &:hover {
+            color: $acid;
+          }
         }
-        &:hover {
-          color: $acid;
-        }
-      }
       .home_content_text_small {
         font-size: $font-size-small;
         font-family: 'Open Sans', sans-serif;

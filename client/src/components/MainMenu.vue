@@ -1,6 +1,6 @@
 <template>
   <div id="main-menu">
-    <div class="wrap-menu">
+    <div class="wrap_menu">
       <div class="logo">
         <neon-logo></neon-logo>
       </div>
@@ -12,13 +12,13 @@
         </li>
       </nav>
       <nav class="social">
-      <li v-for="(icon, index) of icons" :key="index">
-        <a v-bind:href="icon">
-          <i v-bind:class="[fab,
+        <li v-for="(icon, index) of icons" :key="index">
+          <a v-bind:href="icon">
+            <i v-bind:class="[fab,
           fabVar[index]]"></i>
-        </a>
-      </li>
-    </nav>
+          </a>
+        </li>
+      </nav>
     </div>
   </div>
 
@@ -30,7 +30,7 @@
 
   export default {
     name: 'Menu',
-    data () {
+    data() {
       return {
         items: [
           '/',
@@ -71,13 +71,13 @@
 </script>
 
 <style lang="scss">
-@import "../styles/main";
+  @import "../styles/main";
 
   a {
     text-decoration: none;
   }
 
-  .wrap-menu {
+  .wrap_menu {
     width: 60px;
     background-color: $menu-bg;
     height: $height;
@@ -87,13 +87,13 @@
   }
 
   .navigation {
-   @include flex-box;
+    @include flex-box;
 
     & li {
       margin-bottom: 15px;
-        span {
-          opacity: $opacity;
-        }
+      span {
+        opacity: $opacity;
+      }
     }
   }
 
@@ -110,7 +110,7 @@
   }
 
   .social {
-   @include flex-box;
+    @include flex-box;
     padding-bottom: 10px;
 
     & li {
@@ -119,7 +119,7 @@
       margin-top: 5px;
 
       & a {
-      color: $icon;
+        color: $icon;
       }
     }
   }
