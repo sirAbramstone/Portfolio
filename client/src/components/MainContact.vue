@@ -1,11 +1,11 @@
 <template>
   <div class="wrap_contact">
     <main-menu></main-menu>
-
-    <div class="contact_content">
-      <div class="wrap_contact_content_text">
-        <div class="blast-root">
-          <template v-for="(char, i) in chars">
+    <div class="wrap_form">
+      <div class="contact_content">
+        <div class="wrap_contact_content_text">
+          <div class="blast-root">
+            <template v-for="(char, i) in chars">
             <span
               class="blast"
               aria-hidden="true"
@@ -14,12 +14,19 @@
               v-bind:class="{ space: char === ' ' }"
             >
             </span>
-          </template>
-        </div>
-        <div class="contact_content_text_small">If you have any questions, I don`t give a fuck…
+            </template>
+          </div>
+          <div class="contact_content_text_small">If you have any questions, I don`t give a fuck…
+          </div>
         </div>
       </div>
-      <Button v-bind:class="btnCls" btn_msg="send"></Button>
+      <form>
+        <formly-form :form="form"></formly-form>
+        <Button v-bind:class="btnCls" btn_msg="send"></Button>
+      </form>
+    </div>
+    <div class="wrap_google">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2818.2464401408356!2d39.00952081521264!3d45.060511668310156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f04573624ccb7d%3A0x74acdd15ab9f53c8!2z0YPQuy4g0JfQuNC_0L7QstGB0LrQsNGPLCA0Miwg0JrRgNCw0YHQvdC-0LTQsNGALCDQmtGA0LDRgdC90L7QtNCw0YDRgdC60LjQuSDQutGA0LDQuSwgMzUwMDAw!5e0!3m2!1sru!2sru!4v1517402523657" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
   </div>
 </template>
@@ -37,7 +44,15 @@
           button: true,
           btn_contact: true
         },
-        fullText: "Contact me"
+        fullText: "Contact me",
+        form: {
+          fname: {
+            type: 'text'
+          },
+          lname: {
+            type: 'text'
+          }
+        }
       }
     },
 
@@ -98,13 +113,37 @@
 </script>
 
 <style lang="scss">
-  @import "../styles/main.scss";
+
+  @import "../styles/main";
+
+  iframe {
+    height: 100%;
+    filter: opacity(.5) saturate(30%);;
+  }
+
+  .wrap_google{
+    width: 50%;
+  }
 
   .wrap_contact {
-    background: $gradient;
-    width: 100%;
     display: flex;
+    width: 100%;
+    height: 100%;
+    background: $gradient;
+    justify-content: space-between;
 
+    .wrap_form {
+      display: inherit;
+      padding-left: $pad-l;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form {
+      @include flex-box;
+      @import "../styles/main.scss";
+    }
     .contact_content {
       display: inherit;
       flex-direction: column;
@@ -134,4 +173,5 @@
       }
     }
   }
+
 </style>

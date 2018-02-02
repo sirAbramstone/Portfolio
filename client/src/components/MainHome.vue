@@ -136,7 +136,7 @@
       display: inherit;
       flex-direction: column;
       justify-content: center;
-      padding-left: 5%;
+      padding-left: $pad-l;
       .blast {
         display: inline-block;
         font-size: $font-size-large;
