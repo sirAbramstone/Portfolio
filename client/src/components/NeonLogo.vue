@@ -27,7 +27,7 @@
       display: inline-block;
       font-size: 50px;
       font-family: 'Raleway', serif;
-      font-weight: bold;
+      font-weight: normal;
       text-shadow: 0 0 30px #f0e291, 0 0 10px white;
       transition: opacity 0.5s;
       animation: neon 12s infinite linear;
@@ -47,10 +47,10 @@
     28% {
       opacity: 0.5;
     }
-    30% {
+    29% {
       opacity: 0.5
     }
-    39% {
+    42% {
       opacity: 1;
     }
     44% {
@@ -83,10 +83,10 @@
     95% {
       opacity: 0
     }
-    97% {
+    96% {
       opacity: 0
     }
-    98% {
+    97% {
       opacity: 1
     }
     100% {
