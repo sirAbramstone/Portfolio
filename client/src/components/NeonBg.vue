@@ -123,12 +123,14 @@
 
 <script>
   export default {
-    name: 'neon'
+    name: 'neon-bg'
   }
 
 </script>
 
 <style lang="scss">
+  @import "../styles/main";
+
   .container_neon {
     display: flex;
     align-items: center;
@@ -282,6 +284,12 @@
 
     to {
       opacity: 1;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) and (orientation: portrait) {
+    .container_neon {
+      display: none;
     }
   }
 </style>

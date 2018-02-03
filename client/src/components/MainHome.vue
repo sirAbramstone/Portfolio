@@ -16,11 +16,11 @@
             <br v-if="char === ' ' && chars[i - 1] === ','" :key="'br-' + i"/>
           </template>
         </div>
-        <div class="home_content_text_small str">React / Vue / And many other stuff</div>
+        <div class="home_content_text_small str"><p>React / Vue / And many other stuff</p></div>
       </div>
       <Button v-bind:click="ohYeah" v-bind:class="btnCls" btn_msg="contact me"></Button>
     </div>
-    <neon/>
+    <neon-bg/>
   </div>
 </template>
 
@@ -52,7 +52,7 @@
 
     components: {
       'main-menu': MainMenu,
-      'neon': NeonBg,
+      'neon-bg': NeonBg,
       'Button': Button
     },
 
@@ -136,7 +136,25 @@
       display: inherit;
       flex-direction: column;
       justify-content: center;
-      padding-left: 5%;
+      padding-left: $pad-l;
+      .wrap_home_content_text {
+        padding-bottom: 3%;
+        min-width: 480px;
+      }
+      .blast {
+        display: inline-block;
+        font-size: $font-size-large;
+        line-height: 1em;
+        font-family: 'Raleway', serif;
+        transition: all .3s ease-out;
+        opacity: 0;
+        &.space {
+          width: 15px;
+        }
+        &:hover {
+          color: $acid;
+        }
+
         .blast {
           display: inline-block;
           font-size: $font-size-large;
@@ -150,16 +168,15 @@
           &:hover {
             color: $acid;
           }
+          .home_content_text_small {
+            font-size: $font-size-small;
+            font-family: 'Open Sans', sans-serif;
+            color: $icon;
+            margin-top: 10px;
+            margin-bottom: 30px;
+          }
         }
-      .home_content_text_small {
-        font-size: $font-size-small;
-        font-family: 'Open Sans', sans-serif;
-        color: $icon;
-        margin-top: 10px;
-        margin-bottom: 30px;
-        letter-spacing: 0.1em;
       }
     }
   }
-
 </style>

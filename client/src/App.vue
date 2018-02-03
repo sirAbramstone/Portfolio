@@ -29,6 +29,10 @@
 <style lang="scss">
   @import "styles/main";
 
+  html {
+    font-size: 14px;
+  }
+
   body {
     margin: 0;
     padding: 0;

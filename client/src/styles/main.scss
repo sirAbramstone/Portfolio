@@ -1,9 +1,80 @@
 @import "animation";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-@media (max-width: 960px) {
-  .wrap_home_content_text {
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  .wrap_home, .wrap_about, .wrap_skills, .wrap_work, .wrap_contact {
+    flex-direction: column;
+    .home_content {
+      width: 85%;
+      padding-top: 5rem;
+      padding-left: 5rem;
+      justify-content: center;
+      align-items: flex-start;
+      .wrap_home_content_text {
+        min-width: 420px;
+        .blast {
+          font-size: 3.25rem;
+        }
+      }
+    }
+  }
+  .wrap_menu {
+    flex-direction: row;
+    height: 60px;
+    width: 100%;
+    justify-content: space-between;
+    .logo {
+      height: 100%;
+      width: 5%;
+      min-width: 50px;
+    }
+    .navigation {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 30%;
+      min-width: 250px;
+    }
+    .social {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 15%;
+      min-width: 120px;
+      padding-right: 2%;
+      padding-bottom: 0;
+    }
+  }
+}
 
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+  .wrap_home, .wrap_about, .wrap_skills, .wrap_work, .wrap_contact {
+    flex-direction: column;
+    height: 100vh;
+    .home_content {
+      padding-top: 6.5rem;
+      padding-left: 2rem;
+      .wrap_home_content_text {
+        min-width: 320px;
+        .blast {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+
+  .wrap_menu {
+    flex-direction: row;
+    height: 60px;
+    width: 100%;
+    .logo {
+      height: 100%;
+      width: 5%;
+      min-width: 50px;
+    }
+    .navigation, .social {
+      display: none;
+    }
   }
 }
 
@@ -13,11 +84,12 @@ $font-size-small: 1rem;
 $white: #e0e0de;
 $font-size-large: 3.57145rem;
 $opacity: .7;
-$menu-bg: #181818;
+$menu-bg: #18160f;
 $icon: #4d4d4e;
 $height: 100vh;
 $gradient: radial-gradient(ellipse at center, rgb(49, 44, 24) 0%, rgba(0, 0, 0, 0.73) 100%);
 $stack: #8d8d8d;
+$pad-l: 5%;
 
 @mixin flex-box {
   display: flex;
