@@ -21,7 +21,6 @@
         </div>
       </div>
       <form>
-        <formly-form :form="form"></formly-form>
         <Button v-bind:class="btnCls" btn_msg="send"></Button>
       </form>
     </div>
