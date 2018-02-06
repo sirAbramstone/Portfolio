@@ -28,24 +28,24 @@
       width: 5%;
       min-width: 50px;
     }
-    .navigation {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-end;
-      width: 30%;
-      min-width: 250px;
-    }
-    .social {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      width: 15%;
-      min-width: 120px;
-      padding-right: 2%;
-      padding-bottom: 0;
+      .navigation {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 30%;
+        min-width: 250px;
+      }
+      .social {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 15%;
+        min-width: 120px;
+        padding-right: 2%;
+        padding-bottom: 0;
+      }
     }
   }
-}
 
 @media only screen and (max-width: 480px) and (orientation: portrait) {
   .wrap_home, .wrap_about, .wrap_skills, .wrap_work, .wrap_contact {
@@ -72,6 +72,12 @@
       width: 5%;
       min-width: 50px;
     }
+    .navbar_hamburger{
+      display: flex;
+    }
+    .toggle_navigation {
+      display: flex;
+    }
     .navigation, .social {
       display: none;
     }
@@ -80,6 +86,7 @@
 
 $dark: #252627;
 $acid: #bbaf6c;
+$neon-logo: #f9eb97;
 $font-size-small: 1rem;
 $white: #e0e0de;
 $font-size-large: 3.57145rem;

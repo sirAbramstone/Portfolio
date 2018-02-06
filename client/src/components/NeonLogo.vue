@@ -23,7 +23,7 @@
     height: 100%;
     width: 100%;
     #neon_logo {
-      color: #f9eb97;
+      color: $neon-logo;
       display: inline-block;
       font-size: 50px;
       font-family: 'Raleway', serif;
