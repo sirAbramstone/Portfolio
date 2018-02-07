@@ -1,7 +1,7 @@
 @import "animation";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-@media only screen and (min-width: 480px) and (max-width: 1024px) {
+@media (max-height: 450px), only screen and (min-width: 480px) and (max-width: 1024px) {
   .wrap_home, .wrap_about, .wrap_skills, .wrap_work, .wrap_contact {
     flex-direction: column;
     .home_content, .about_content {
@@ -47,7 +47,7 @@
     }
   }
 
-@media only screen and (max-width: 480px) and (orientation: portrait) {
+@media only screen and (max-width: 480px) {
   .wrap_home, .wrap_about, .wrap_skills, .wrap_work, .wrap_contact {
     flex-direction: column;
     height: 100vh;

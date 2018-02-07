@@ -286,8 +286,8 @@
       opacity: 1;
     }
   }
-  
-  @media only screen and (max-width: 480px) and (orientation: portrait) {
+
+  @media only screen and (max-width: 480px) {
     .container_neon {
       display: none;
     }
