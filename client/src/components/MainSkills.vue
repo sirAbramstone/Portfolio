@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="wrap_skills">
+    <main-menu/>
     <section class="intro">
 
     <div class="intro-block">
-      <main-menu></main-menu>
       <div class="centerfold-wrap">
         <div class="hex-master-wrap">
           <div class="hover-notify">Hover Me!</div>
@@ -262,9 +262,16 @@
     margin: 0;
   }
 
+  .wrap_skills {
+    background: $gradient;
+    width: 100%;
+    display: flex;
+  }
+
   section.intro {
     font-family: oswald;
-    position: relative;
+    display: flex;
+
     height: 100vh;
     width: 100%;
     background: #202020;
@@ -303,6 +310,7 @@
     display: flex;
     align-items: center;
     height: 100%;
+    width: 100%;
     box-shadow: inset 0px 0px 64px 0px rgba(50,50,50,0.75);
   }
 

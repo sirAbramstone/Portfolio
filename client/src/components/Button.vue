@@ -20,7 +20,8 @@
   }
 
   .btn_home {
-    width: 150px;
+    min-width: 150px;
+    min-height: 30px;
   }
 
 </style>

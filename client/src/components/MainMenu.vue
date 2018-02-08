@@ -118,6 +118,9 @@
     :hover {
       color: $neon-logo;
     }
+    &:focus, &:active {
+      outline: none;
+    }
   }
 
   .toggle_navigation {
