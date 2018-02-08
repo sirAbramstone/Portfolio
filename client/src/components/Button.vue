@@ -1,6 +1,6 @@
 <!--suppress ALL -->
 <template>
-  <button v-on:click="() => { click() }">
+  <button class="button btn_home">
     {{ btn_msg }}
   </button>
 </template>
