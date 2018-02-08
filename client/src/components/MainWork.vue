@@ -175,8 +175,10 @@
     display: flex;
 
     #demo {
+      display: flex;
       width: 100%;
       height: 100vh;
+      opacity: .99;
     }
   }
 </style>

@@ -80,6 +80,7 @@
     .toggle_navigation {
       display: flex;
       position: fixed;
+      z-index: 999;
     }
     .navigation, .social {
       display: none;
@@ -127,6 +128,11 @@ $pad-l: 5%;
   letter-spacing: 3px;
   font-size: 12px;
   background: $gradient;
+  outline: none;
+  &:hover {
+    color: $dark;
+    background: $acid;
+  }
 }
 
 @mixin content-h2 {
