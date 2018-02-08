@@ -4,12 +4,12 @@
     <div class="in_wrap">
       <!--todo make input focus-->
       <input type="text" id="in_1" class="in animated fadeInDown" placeholder="Name" name="name">
-      <label for="in_1"></label>
+      <!--<label for="in_1" class="lab_in1"></label>-->
       <input type="text" id="in_2" class="in animated fadeInDown" placeholder="Email" name="email">
-      <label for="in_3"></label>
+      <!--<label for="in_3" class="lab_in2"></label>-->
     </div>
     <input type="text" id="in_3" class="in animated fadeInDown" placeholder="Subject" name="subject">
-    <label for="in_3"></label>
+    <!--<label for="in_3" class="lab_in3"></label>-->
     <textarea name="textarea" id="txtarea" cols="30" rows="10" title="your question"></textarea>
     <Button btn_msg="send message" type="submit"></Button>
   </form>
@@ -31,6 +31,7 @@
 
   #formId {
     display: flex;
+    position: relative;
 
     #txtarea, .in {
       width: 100%;
@@ -57,9 +58,9 @@
   }
 
   /*focus elements animation*/
-  .in_1, .in_2, .in_3 {
+  .lab_in1, .lab_in2, .lab_in3 {
     height: 5px;
-    width: 50px;
+    width: 100%;
     background: $acid;
   }
 </style>
