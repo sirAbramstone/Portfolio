@@ -14,7 +14,7 @@
         <i class="fas fa-bars"></i>
       </button>
 
-      <nav class="toggle_navigation animated fadeInRight" v-if="seen">
+      <nav class="toggle_navigation animated slideInRight" v-if="seen">
         <li v-for="(item, index) of items" :key="index">
           <router-link v-bind:to="item">
             <span v-bind:class="[lnr, icon, lnrVar[index]]"></span>

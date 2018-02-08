@@ -698,4 +698,23 @@
     content: "";
     transform: rotate(60deg);
   }
+
+  @media (max-height: 450px), only screen and (min-width: 480px) and (max-width: 1024px) {
+    .centerfold-wrap {
+      width: 100%;
+      .hex-master-wrap {
+        min-width: 520px;
+      }
+      .code-description {
+        padding-left: 10px;
+        max-width: 500px;
+        .code-title {
+          font-size: 5rem;
+        }
+      }
+      .code-description > div {
+        padding: 0 20px;
+      }
+    }
+  }
 </style>

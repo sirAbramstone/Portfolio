@@ -27,24 +27,24 @@
       width: 5%;
       min-width: 50px;
     }
-      .navigation {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-end;
-        width: 30%;
-        min-width: 250px;
-      }
-      .social {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 15%;
-        min-width: 120px;
-        padding-right: 2%;
-        padding-bottom: 0;
-      }
+    .navigation {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 30%;
+      min-width: 250px;
+    }
+    .social {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 15%;
+      min-width: 120px;
+      padding-right: 2%;
+      padding-bottom: 0;
     }
   }
+}
 
 @media only screen and (max-width: 480px) {
   .wrap_home, .wrap_about, .wrap_skills, .wrap_work, .wrap_contact {
@@ -74,7 +74,7 @@
       width: 5%;
       min-width: 50px;
     }
-    .navbar_hamburger{
+    .navbar_hamburger {
       display: flex;
     }
     .toggle_navigation {
@@ -98,6 +98,7 @@ $opacity: .7;
 $menu-bg: #18160f;
 $icon: #4d4d4e;
 $height: 100vh;
+$loader-size: 20vh;
 $gradient: radial-gradient(ellipse at center, rgb(49, 44, 24) 0%, rgba(0, 0, 0, 0.73) 100%);
 $stack: #8d8d8d;
 $pad-l: 5%;
