@@ -18,7 +18,9 @@
         </div>
         <div class="home_content_text_small str"><p>React / Vue / And many other stuff</p></div>
       </div>
-      <Button v-bind:click="ohYeah" v-bind:class="btnCls" btn_msg="contact me"></Button>
+      <router-link class="flat-button" v-bind:to="'/contact'">
+        <Button v-bind:class="btnCls" btn_msg="contact me"></Button>
+      </router-link>
     </div>
     <neon-bg/>
   </div>
@@ -61,21 +63,6 @@
     },
 
     methods: {
-
-      /**
-       * Oh... yeah,
-       * just click on 'CONTACT ME' button
-       */
-      ohYeah() {
-        const chars = document.querySelectorAll('.blast-root .blast')
-        for (let char of chars) {
-          char.style.opacity = 0
-        }
-        this.fullText = "Oh... yeah, you touch my, tra-la-la"
-        this.$nextTick(() => {
-          this.init()
-        })
-      },
 
       /**
        * Initialization animation of fullText
@@ -176,6 +163,9 @@
             margin-bottom: 30px;
           }
         }
+      }
+      .flat-button {
+        width: 150px;
       }
     }
   }

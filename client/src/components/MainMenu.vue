@@ -84,7 +84,6 @@
       }
     },
     components: {
-      NeonLogo,
       'neon-logo': NeonLogo
     }
   }

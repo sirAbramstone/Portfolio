@@ -60,9 +60,6 @@
         }
       }
     }
-    section.intro {
-      display: none;
-    }
   }
 
   .wrap_menu {
@@ -130,6 +127,7 @@ $pad-l: 5%;
   font-size: 12px;
   background: $gradient;
   outline: none;
+  cursor: pointer;
   &:hover {
     color: $dark;
     background: $acid;
