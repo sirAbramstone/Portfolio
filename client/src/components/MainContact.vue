@@ -17,7 +17,7 @@
             </span>
             </template>
           </div>
-          <div class="contact_content_text_small">If you have any questions, I don`t give a fuck…
+          <div class="contact_content_text_small">If you have any questions, please don’t hesitate to contact using form below…
           </div>
         </div>
       </div>
@@ -104,7 +104,7 @@
 <style lang="scss">
 
   @import "../styles/main";
-
+  /*todo доделать адаптив*/
   iframe {
     height: 100%;
     filter: opacity(.5) saturate(30%);;
@@ -116,7 +116,7 @@
 
   .wrap_contact {
     display: flex;
-    height: 100%;
+    height: 100vh;
     background: $gradient;
     overflow: hidden;
 
