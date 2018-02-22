@@ -4,7 +4,7 @@
       <div class="logo">
         <neon-logo></neon-logo>
       </div>
-
+      <!--бургер-->
       <button class="navbar_hamburger"
               type="button"
               v-on:click="seen = !seen"
@@ -13,7 +13,7 @@
               aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
       </button>
-
+      <!--иконки бургера-->
       <nav class="toggle_navigation animated slideInRight" v-if="seen">
         <li v-for="(item, index) of items" :key="index">
           <router-link v-bind:to="item">
@@ -22,6 +22,7 @@
         </li>
       </nav>
 
+      <!--иконки навигации-->
       <nav class="navigation">
         <li v-for="(item, index) of items" :key="index">
           <router-link v-bind:to="item">
@@ -29,6 +30,8 @@
           </router-link>
         </li>
       </nav>
+
+      <!--соц иконки-->
       <nav class="social">
         <li v-for="(icon, index) of icons" :key="index">
           <a v-bind:href="icon">
@@ -152,6 +155,14 @@
       margin-bottom: 15px;
       span {
         opacity: $opacity;
+
+        .lnr-home::after {
+          content: "HOME";
+
+          width: 20px;
+          height: 20px;
+          color: $acid;
+        }
       }
     }
   }
