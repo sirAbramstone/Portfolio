@@ -20,6 +20,8 @@
 
   #formId {
     max-width: 600px;
+    margin-left: -100px;
+
   }
 
   .wrap_google {
@@ -59,16 +61,48 @@
   .wrap_home, .wrap_about, .wrap_skills, .wrap_work, .wrap_contact {
     flex-direction: column;
     height: 100vh;
-    .home_content, .about_content {
+    .home_content, .about_content, .contact_content {
       padding-top: 6.5rem;
       padding-left: 2rem;
-      .wrap_home_content_text, .wrap_about_content_text {
+      .wrap_home_content_text, .wrap_about_content_text, .wrap_contact_content_text {
         min-width: 320px;
         .blast {
           font-size: 2.5rem;
         }
       }
     }
+    .wrap_contact {
+      height: 150vh;
+      overflow: visible;
+    }
+  }
+
+  #formId {
+    max-width: 300px;
+    min-height: 400px;
+    padding-bottom: 5%;
+
+    .in:first-child {
+      margin-right: 0;
+    }
+
+    .in:last-child {
+      margin-bottom: 20px;
+    }
+
+    #txtarea {
+      margin-bottom: 15px;
+    }
+
+    .in_wrap {
+      max-width: 350px;
+      min-width: 0;
+      flex-wrap: wrap;
+    }
+  }
+
+  .wrap_google {
+    display: none;
   }
 
   .wrap_menu {

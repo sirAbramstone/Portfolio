@@ -31,6 +31,7 @@
     display: flex;
     position: relative;
     max-width: 800px;
+    align-items: flex-end;
 
     #txtarea, .in {
       width: 100%;
@@ -50,10 +51,14 @@
     }
     .in_wrap {
       display: flex;
+      max-width: 100%;
       min-width: 600px;
     }
     .in:first-child {
       margin-right: 10px;
+    }
+    #txtarea {
+      margin-bottom: 25px;
     }
   }
 
