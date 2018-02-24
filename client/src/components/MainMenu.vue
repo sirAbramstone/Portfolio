@@ -69,10 +69,10 @@
           'lnr-envelope'
         ],
         icons: [
-          'www.google.com',
-          'www.yandex.ru',
-          'www.mail.ru',
-          'www.facebook.com'
+          'https://github.com/papaJhan',
+          'https://join.skype.com/invite/ds0rxh0OpaGW',
+          'https://vk.com/vse_umrut_a_ya_greipfrut',
+          'https://t.me/manaWyrmer'
         ],
         fab: 'fab',
         fabVar: [
