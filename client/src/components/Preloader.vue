@@ -14,9 +14,7 @@
 </script>
 
 <style lang="scss">
-  $background-color: #252627;
-  $loader-color: #fff;
-  $loader-size: 20vh;
+  @import '../styles/main.scss';
 
   #preloader {
     position: absolute;
@@ -25,7 +23,7 @@
   }
 
   .loader {
-    color: #fff;
+    color: $icon;
     justify-self: center;
     font-family: Consolas, Menlo, Monaco, monospace;
     font-weight: bold;

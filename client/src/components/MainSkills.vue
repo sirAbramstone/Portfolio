@@ -3,170 +3,177 @@
     <main-menu/>
     <section class="intro">
 
-    <div class="intro-block">
-      <div class="centerfold-wrap">
-        <div class="hex-master-wrap">
-          <div class="hover-notify">Hover Me!</div>
-          <div class="grid-1">
-            <div class="hex-wrap backend" data-title="ABOUT ME" data-content="about-desc" data-color="#fdae22">
-              <div class="hex-init"></div>
-              <div class="hex-borders">
-                <div class="border-1"></div>
-                <div class="border-2"></div>
-                <div class="border-3"></div>
+      <div class="intro-block">
+        <div class="centerfold-wrap">
+          <div class="hex-master-wrap">
+            <div class="hover-notify">Hover Me!</div>
+            <div class="grid-1">
+              <div class="hex-wrap backend" data-title="ABOUT ME" data-content="about-desc" data-color="#fdae22">
+                <div class="hex-init"></div>
+                <div class="hex-borders">
+                  <div class="border-1"></div>
+                  <div class="border-2"></div>
+                  <div class="border-3"></div>
+                </div>
+                <div class="hexagon">
+                  <div class="hex-inner-1">
+                    <div class="hex-inner-2"></div>
+                  </div>
+                </div>
               </div>
-              <div class="hexagon">
-                <div class="hex-inner-1">
-                  <div class="hex-inner-2"></div>
+              <div class="hex-wrap frontend" data-title="INFO TECH" data-content="it-desc" data-color="#fdae22">
+                <div class="hex-init"></div>
+                <div class="hex-borders">
+                  <div class="border-1"></div>
+                  <div class="border-2"></div>
+                  <div class="border-3"></div>
+                </div>
+
+                <div class="hexagon">
+                  <div class="hex-inner-1">
+                    <div class="hex-inner-2"></div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="hex-wrap frontend" data-title="INFO TECH" data-content="it-desc" data-color="#fdae22">
-              <div class="hex-init"></div>
-              <div class="hex-borders">
-                <div class="border-1"></div>
-                <div class="border-2"></div>
-                <div class="border-3"></div>
-              </div>
+            <div class="grid-2">
+              <div class="hex-wrap html" data-title="FRONTEND" data-content="frontend-desc" data-color="#fdae22">
+                <div class="hex-init"></div>
+                <div class="hex-borders">
+                  <div class="border-1"></div>
+                  <div class="border-2"></div>
+                  <div class="border-3"></div>
+                </div>
 
-              <div class="hexagon">
-                <div class="hex-inner-1">
-                  <div class="hex-inner-2"></div>
+                <div class="hexagon">
+                  <div class="hex-inner-1">
+                    <div class="hex-inner-2"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="hex-wrap css" data-title="BACKEND" data-content="backend-desc" data-color="#fdae22">
+                <div class="hex-init"></div>
+                <div class="hex-borders">
+                  <div class="border-1"></div>
+                  <div class="border-2"></div>
+                  <div class="border-3"></div>
+                </div>
+
+                <div class="hexagon">
+                  <div class="hex-inner-1">
+                    <div class="hex-inner-2"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="hex-wrap jquery" data-title="UX / UI" data-content="uxui-desc" data-color="#fdae22">
+                <div class="hex-init"></div>
+                <div class="hex-borders">
+                  <div class="border-1"></div>
+                  <div class="border-2"></div>
+                  <div class="border-3"></div>
+                </div>
+
+                <div class="hexagon">
+                  <div class="hex-inner-1">
+                    <div class="hex-inner-2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-3">
+              <div class="hex-wrap gui" data-title="MULTIMEDIA" data-content="media-desc" data-color="#fdae22">
+                <div class="hex-init"></div>
+                <div class="hex-borders">
+                  <div class="border-1"></div>
+                  <div class="border-2"></div>
+                  <div class="border-3"></div>
+                </div>
+
+                <div class="hexagon">
+                  <div class="hex-inner-1">
+                    <div class="hex-inner-2"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="hex-wrap seo" data-title="EDUCATOR" data-content="edu-desc" data-color="#fdae22">
+                <div class="hex-init"></div>
+                <div class="hex-borders">
+                  <div class="border-1"></div>
+                  <div class="border-2"></div>
+                  <div class="border-3"></div>
+                </div>
+
+                <div class="hexagon">
+                  <div class="hex-inner-1">
+                    <div class="hex-inner-2"></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="grid-2">
-            <div class="hex-wrap html" data-title="FRONTEND" data-content="frontend-desc" data-color="#fdae22">
-              <div class="hex-init"></div>
-              <div class="hex-borders">
-                <div class="border-1"></div>
-                <div class="border-2"></div>
-                <div class="border-3"></div>
-              </div>
 
-              <div class="hexagon">
-                <div class="hex-inner-1">
-                  <div class="hex-inner-2"></div>
-                </div>
-              </div>
-            </div>
-            <div class="hex-wrap css" data-title="BACKEND" data-content="backend-desc" data-color="#fdae22">
-              <div class="hex-init"></div>
-              <div class="hex-borders">
-                <div class="border-1"></div>
-                <div class="border-2"></div>
-                <div class="border-3"></div>
-              </div>
-
-              <div class="hexagon">
-                <div class="hex-inner-1">
-                  <div class="hex-inner-2"></div>
-                </div>
-              </div>
-            </div>
-            <div class="hex-wrap jquery" data-title="UX / UI" data-content="uxui-desc" data-color="#fdae22">
-              <div class="hex-init"></div>
-              <div class="hex-borders">
-                <div class="border-1"></div>
-                <div class="border-2"></div>
-                <div class="border-3"></div>
-              </div>
-
-              <div class="hexagon">
-                <div class="hex-inner-1">
-                  <div class="hex-inner-2"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="grid-3">
-            <div class="hex-wrap gui" data-title="MULTIMEDIA" data-content="media-desc" data-color="#fdae22">
-              <div class="hex-init"></div>
-              <div class="hex-borders">
-                <div class="border-1"></div>
-                <div class="border-2"></div>
-                <div class="border-3"></div>
-              </div>
-
-              <div class="hexagon">
-                <div class="hex-inner-1">
-                  <div class="hex-inner-2"></div>
-                </div>
-              </div>
-            </div>
-            <div class="hex-wrap seo" data-title="EDUCATOR" data-content="edu-desc" data-color="#fdae22">
-              <div class="hex-init"></div>
-              <div class="hex-borders">
-                <div class="border-1"></div>
-                <div class="border-2"></div>
-                <div class="border-3"></div>
-              </div>
-
-              <div class="hexagon">
-                <div class="hex-inner-1">
-                  <div class="hex-inner-2"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="code-display">
-          <div class="code-description">
-            <div class="about-desc">
-              <p class="code-title"></p>
-              <p>Hi! I'm Sara.</p>
-              <p>Since middle school, I've been a huge tech geek. Since then, I've held many hats in the technology field. Check out my skills! </p>
-              <div class="code-icon"></div>
-            </div>
-            <div class="it-desc">
-              <p class="code-title"></p>
-              <p><span>Duration:</span>10+ years</p>
-              <p><span>Experience</span>Windows OS, Mac OS X, Linux Mint, Ubuntu, Debian. Hardware troubleshooting, networking, imaging, ticketing systems, Microsoft Office, Active Directory, SQL, and more.</p>
-              <div class="code-icon"></div>
-            </div>
-            <div class="frontend-desc">
-              <p class="code-title"></p>
-              <p><span>Duration:</span>8 Years</p>
-              <p><span>Experience:</span>HTML, CSS, JavaScript, Bootstrap, jQuery</p>
-              <p><span>Most recently </span>AngularJS</p>
-              <div class="code-icon"></div>
-            </div>
-            <div class="backend-desc">
-              <p class="code-title"></p>
-              <p><span>Duration:</span>4 Years</p>
-              <p><span>Experience:</span>Ruby, Rails, PostgreSQL</p>
-              <p><span>Most recently:</span>Node.js, Express, MongoDB</p>
-              <div class="code-icon"></div>
-            </div>
-            <div class="uxui-desc">
-              <p class="code-title"></p>
-              <p><span>Duration:</span>6 Years</p>
-              <p><span>Experience:</span>Photoshop, Principle, Sketch, Omnigraffle, Wireframing / Prototyping, FiveSecondTest, UsabilityTest</p>
-              <p><span>Most recently:</span>Data analytics & visualization
+          <div class="code-display">
+            <div class="code-description">
+              <div class="about-desc">
+                <p class="code-title"></p>
+                <p>Hi! I'm Sara.</p>
+                <p>Since middle school, I've been a huge tech geek. Since then, I've held many hats in the technology
+                  field. Check out my skills! </p>
                 <div class="code-icon"></div>
+              </div>
+              <div class="it-desc">
+                <p class="code-title"></p>
+                <p><span>Duration:</span>10+ years</p>
+                <p><span>Experience</span>Windows OS, Mac OS X, Linux Mint, Ubuntu, Debian. Hardware troubleshooting,
+                  networking, imaging, ticketing systems, Microsoft Office, Active Directory, SQL, and more.</p>
+                <div class="code-icon"></div>
+              </div>
+              <div class="frontend-desc">
+                <p class="code-title"></p>
+                <p><span>Duration:</span>8 Years</p>
+                <p><span>Experience:</span>HTML, CSS, JavaScript, Bootstrap, jQuery</p>
+                <p><span>Most recently </span>AngularJS</p>
+                <div class="code-icon"></div>
+              </div>
+              <div class="backend-desc">
+                <p class="code-title"></p>
+                <p><span>Duration:</span>4 Years</p>
+                <p><span>Experience:</span>Ruby, Rails, PostgreSQL</p>
+                <p><span>Most recently:</span>Node.js, Express, MongoDB</p>
+                <div class="code-icon"></div>
+              </div>
+              <div class="uxui-desc">
+                <p class="code-title"></p>
+                <p><span>Duration:</span>6 Years</p>
+                <p><span>Experience:</span>Photoshop, Principle, Sketch, Omnigraffle, Wireframing / Prototyping,
+                  FiveSecondTest, UsabilityTest</p>
+                <p><span>Most recently:</span>Data analytics & visualization
+                <div class="code-icon"></div>
+              </div>
+              <div class="media-desc">
+                <p class="code-title"></p>
+                <p><span>Duration:</span>10+ Years</p>
+                <p><span>Experience:</span>Video Editing, Directing, Producing, Writing, Sound Mixing/Editing, Boom
+                  operation, Social Media management, Logo/Brand design, Poster/Flyer design, Tattoo design,
+                  Transcribing, copy editing, and more.</p>
+                <div class="code-icon"></div>
+              </div>
+              <div class="edu-desc">
+                <p class="code-title"></p>
+                <p><span>Duration:</span>2 Years</p>
+                <p><span>Experience:</span>City Year / AmeriCorps alumni (served with 7th &amp; 8th graders), High
+                  school media production and technology literacy teacher & summer program instructor, Adjunct college
+                  instructor- information technology and front end development.</p>
+                <div class="code-icon"></div>
+              </div>
             </div>
-            <div class="media-desc">
-              <p class="code-title"></p>
-              <p><span>Duration:</span>10+ Years</p>
-              <p><span>Experience:</span>Video Editing, Directing, Producing, Writing, Sound Mixing/Editing, Boom operation, Social Media management, Logo/Brand design, Poster/Flyer design, Tattoo design, Transcribing, copy editing, and more.</p>
-              <div class="code-icon"></div>
-            </div>
-            <div class="edu-desc">
-              <p class="code-title"></p>
-              <p><span>Duration:</span>2 Years</p>
-              <p><span>Experience:</span>City Year / AmeriCorps alumni (served with 7th &amp; 8th graders), High school media production and technology literacy teacher & summer program instructor, Adjunct college instructor-  information technology and front end development.</p>
-              <div class="code-icon"></div>
-            </div>
+
           </div>
+          <div class="hoverblock"></div>
+        </div> <!-- End Centerfold-Wrap -->
+      </div>
 
-        </div>
-        <div class="hoverblock"></div>
-      </div> <!-- End Centerfold-Wrap -->
-    </div>
-
-  </section>
+    </section>
   </div>
 </template>
 
@@ -178,19 +185,24 @@
     components: {
       'main-menu': MainMenu
     },
-    mounted () {
+    mounted() {
       $(document).ready(function () {
         function hex_initial_animation() {
-          $(".hex-wrap,.hover-notify").velocity("transition.expandIn", { stagger: 150 });
+          $(".hex-wrap,.hover-notify").velocity("transition.expandIn", {stagger: 150});
           $(".hex-wrap").velocity("callout.pulse");
-          $(".hoverblock").velocity("fadeOut", { delay: 3000, duration: 0 });
+          $(".hoverblock").velocity("fadeOut", {delay: 3000, duration: 0});
         }
+
         hex_initial_animation();
 
-        var hoverdetect = setInterval(function(){ hovernotify() }, 3000);
+        var hoverdetect = setInterval(function () {
+          hovernotify()
+        }, 3000);
+
         function hovernotify() {
           $(".hover-notify").velocity("callout.tada");
         }
+
         function myStopFunction() {
           $(".hover-notify").velocity('stop', true).velocity("fadeOut");
           clearInterval(hoverdetect);
@@ -200,24 +212,25 @@
 
           myStopFunction();
 
-          var title_color =  $(this).parent().attr("data-color");
+          var title_color = $(this).parent().attr("data-color");
           var title_name = $(this).parent().attr("data-title");
           var desc_name = $(this).parent().attr("data-content");
 
           function hex_description() {
             $('.code-description').velocity('stop', true).velocity("transition.slideRightBigIn");
             $('.' + desc_name).siblings().removeClass('desc-active');
-            setTimeout(function() {
+            setTimeout(function () {
               $('.' + desc_name).addClass('desc-active');
-              $('.code-descriptopn > div, .desc-active').children().velocity('stop', true).velocity("transition.slideRightBigIn", { stagger: 300 });
-              $('.code-title, .desc-active span').velocity({color: title_color}, { queue: false });
+              $('.code-descriptopn > div, .desc-active').children().velocity('stop', true).velocity("transition.slideRightBigIn", {stagger: 300});
+              $('.code-title, .desc-active span').velocity({color: title_color}, {queue: false});
               $('.code-title').text(title_name)
             }, 0);
           }
+
           hex_description();
 
           $(this).parent().addClass('hexactive');
-          $('.hexactive').velocity({scaleX:"1.1",scaleY:"1.1"}, { duration: 200 });
+          $('.hexactive').velocity({scaleX: "1.1", scaleY: "1.1"}, {duration: 200});
 
         }).mouseleave(function () {
           $('.hexactive').velocity('stop', true).velocity('reverse').removeClass('hexactive');
@@ -230,32 +243,75 @@
 <style lang="scss">
   @import "../styles/main";
 
-
   /* Typography
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
     margin-top: 0;
-    margin-bottom: 2rem; }
-  h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
-  h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
-  h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
-  h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
-  h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
-  h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    font-size: 4.0rem;
+    line-height: 1.2;
+    letter-spacing: -.1rem;
+  }
+
+  h2 {
+    font-size: 3.6rem;
+    line-height: 1.25;
+    letter-spacing: -.1rem;
+  }
+
+  h3 {
+    font-size: 3.0rem;
+    line-height: 1.3;
+    letter-spacing: -.1rem;
+  }
+
+  h4 {
+    font-size: 2.4rem;
+    line-height: 1.35;
+    letter-spacing: -.08rem;
+  }
+
+  h5 {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    letter-spacing: -.05rem;
+  }
+
+  h6 {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    letter-spacing: 0;
+  }
 
   /* Larger than phablet */
   @media (min-width: 550px) {
-    h1 { font-size: 5.0rem; }
-    h2 { font-size: 4.2rem; }
-    h3 { font-size: 3.6rem; }
-    h4 { font-size: 3.0rem; }
-    h5 { font-size: 2.4rem; }
-    h6 { font-size: 1.5rem; }
+    h1 {
+      font-size: 5.0rem;
+    }
+    h2 {
+      font-size: 4.2rem;
+    }
+    h3 {
+      font-size: 3.6rem;
+    }
+    h4 {
+      font-size: 3.0rem;
+    }
+    h5 {
+      font-size: 2.4rem;
+    }
+    h6 {
+      font-size: 1.5rem;
+    }
   }
 
   p {
-    margin-top: 0; }
+    margin-top: 0;
+  }
 
   * {
     box-sizing: border-box;
@@ -275,32 +331,17 @@
     height: 100vh;
     width: 100%;
     background: #202020;
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfdfdf', endColorstr='#dfdfdf',GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#dfdfdf', GradientType=1);
     overflow: hidden;
     z-index: 1;
     background: $gradient;
   }
-
-
-
-
-
-
-
-
-
 
   .welcome {
     font-size: 60px;
     text-align: center;
     color: #dfdfdf;
   }
-
-
-
-
-
-
 
   /********************************************************************************************************************************
                                               Hexagon Intro Blocks
@@ -311,7 +352,7 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    box-shadow: inset 0px 0px 64px 0px rgba(50,50,50,0.75);
+    box-shadow: inset 0px 0px 64px 0px rgba(50, 50, 50, 0.75);
   }
 
   .hex-bg-big-text {
@@ -464,21 +505,6 @@
     background-position: right center;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   .hex-master-wrap {
     position: relative;
     /* width: 50%; */
@@ -528,11 +554,6 @@
     z-index: -1;
     /* transform: rotate(60deg); */
   }
-
-
-
-
-
 
   .intro-block .grid-1,
   .intro-block .grid-2,
@@ -637,12 +658,6 @@
     overflow: hidden;
   }
 
-
-
-
-
-
-
   .hex-inner-2::before, .hex-inner-2::after {
     position: absolute;
     background-repeat: no-repeat;
@@ -697,5 +712,32 @@
     margin: auto;
     content: "";
     transform: rotate(60deg);
+  }
+
+  @media (max-height: 450px), only screen and (min-width: 768px) and (max-width: 1024px) {
+    .centerfold-wrap {
+      width: 100%;
+      .hex-master-wrap {
+        min-width: 520px;
+      }
+      .code-description {
+        padding-left: 10px;
+        max-width: 500px;
+        .code-title {
+          font-size: 3.5rem;
+        }
+      }
+      .code-description > div {
+        padding: 0 15px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    section.intro {
+      .intro-block{
+        display: none;
+      }
+    }
   }
 </style>

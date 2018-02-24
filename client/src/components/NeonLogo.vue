@@ -1,6 +1,8 @@
 <template>
   <div class="container_neon_logo">
-    <div id="neon_logo">D</div>
+    <router-link v-bind:to="'/'">
+      <div id="neon_logo">D</div>
+    </router-link>
   </div>
 </template>
 

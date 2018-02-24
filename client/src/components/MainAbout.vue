@@ -31,6 +31,9 @@
         </div>
       </div>
     </div>
+
+    <iframe src="https://tools.applemusic.com/embed/v1/album/589547976?country=us" height="500px" width="30%" frameborder="0" style="margin-right: 5%;"></iframe>
+
   </div>
 </template>
 
@@ -130,6 +133,8 @@
 
   .wrap_about {
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     background: $gradient;
     height: $height;
