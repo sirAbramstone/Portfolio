@@ -31,6 +31,7 @@
     display: flex;
     position: relative;
     max-width: 800px;
+    height: $height;
     align-items: flex-end;
 
     #txtarea, .in {
