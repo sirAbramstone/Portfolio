@@ -352,7 +352,6 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    box-shadow: inset 0px 0px 64px 0px rgba(50, 50, 50, 0.75);
   }
 
   .hex-bg-big-text {
