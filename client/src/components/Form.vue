@@ -1,8 +1,6 @@
 <template>
   <form id="formId" class="form fadeIn" method="post" action="https://formspree.io/golovsha@gmail.com">
-    <!--//todo add styles-->
     <div class="in_wrap">
-      <!--todo make input focus-->
       <input type="text" id="in_1" class="in animated fadeInDown" placeholder="Name" name="name">
       <!--<label for="in_1" class="lab_in1"></label>-->
       <input type="text" id="in_2" class="in animated fadeInDown" placeholder="Email" name="email">
@@ -32,6 +30,9 @@
   #formId {
     display: flex;
     position: relative;
+    max-width: 800px;
+    height: $height;
+    align-items: flex-end;
 
     #txtarea, .in {
       width: 100%;
@@ -51,9 +52,14 @@
     }
     .in_wrap {
       display: flex;
+      max-width: 100%;
+      min-width: 600px;
     }
     .in:first-child {
       margin-right: 10px;
+    }
+    #txtarea {
+      margin-bottom: 25px;
     }
   }
 
